@@ -19,14 +19,16 @@
     --background-color-secondary: #464b5d;
     /* --cell-background-color-main: var(--cell-background-color-secondary); */
     --cell-background-color-main: var(--background-color-main);
-    --cell-background-color-secondary: #073642;
-    --cell-border: medium solid #04313c;
+    --cell-background-color-secondary: #1a1d30;
+    --markdown-cell-background-color: #1a1d30;
+    /* --cell-border: medium solid #04313c; */
+    --cell-border: transparent;
 
     /* Other */
     /* --selected-cell-active-color: #edbc52; */
     --selected-cell-active-color: red;
     --selected-cell-passive-color: yellow;
-    --markdown-headings-color: cyan;
+    --markdown-headings-color: #f791ac;
     --horizontal-rule-color: var(--markdown-headings-color) --selected-cell-passive-color: #d78585;
     --code-cursor-color: #008faf;
     --code-cursor-thickness: 0.7em;
@@ -1764,8 +1766,8 @@ div.cell.text_cell.selected::before,
 .edit_mode div.cell.text_cell.selected:before,
 div.cell.text_cell.selected:before,
 div.cell.text_cell.selected.jupyter-soft-selected:before {
-    background: var(--cell-background-color-secondary) !important;
-    background-color: var(--cell-background-color-secondary) !important;
+    background: var(--markdown-cell-background-color) !important;
+    background-color: var(--markdown-cell-background-color) !important;
     border-color: #b58900 !important;
 }
 
@@ -1822,7 +1824,7 @@ div.cell.code_cell.selected .input {
 div.cell.selected.jupyter-soft-selected .prompt,
 div.cell.text_cell.selected.jupyter-soft-selected .prompt {
     top: 0;
-    border-left: var(--cell-background-color-secondary) !important;
+    border-left: var(--markdown-cell-background-color) !important;
     border-radius: 2px;
 }
 
@@ -1837,7 +1839,7 @@ div.cell.text_cell.selected.jupyter-soft-selected {
     padding-left: 26px !important;
     border-right-color: #a38012 !important;
     border-right-width: 0px !important;
-    background: #a38012 !important;
+    background: var(--markdown-cell-background-color) !important;
     border-radius: 5px !important;
 }
 
@@ -2070,8 +2072,8 @@ div.text_cell_render {
     font-size: 13pt;
     line-height: 130% !important;
     color: #586e75;
-    background: var(--cell-background-color-main);
-    background-color: var(--cell-background-color-main);
+    background: var(--markdown-cell-background-color);
+    background-color: var(--markdown-cell-background-color);
     border-radius: 0px;
 }
 
@@ -2090,8 +2092,8 @@ div.cell.text_cell .CodeMirror-lines {
 
 div.cell.text_cell.unrendered div.input_area,
 div.cell.text_cell.rendered div.input_area {
-    background-color: var(--cell-background-color-main);
-    background: var(--cell-background-color-main);
+    background-color: var(--markdown-cell-background-color);
+    background: var(--markdown-cell-background-color);
     border: 0px;
     border-radius: 2px;
 }
@@ -2104,32 +2106,32 @@ div.cell.text_cell .CodeMirror pre {
 div.cell.text_cell.rendered.selected {
     font-family: 'IBM Plex Sans';
     line-height: 170% !important;
-    background: var(--cell-background-color-main);
-    background-color: var(--cell-background-color-main);
+    background: var(--markdown-cell-background-color);
+    background-color: var(--markdown-cell-background-color);
     border-radius: 0px;
 }
 
 div.cell.text_cell.unrendered.selected {
     font-family: 'IBM Plex Sans';
     line-height: 170% !important;
-    background: var(--cell-background-color-main);
-    background-color: var(--cell-background-color-main);
+    background: var(--markdown-cell-background-color);
+    background-color: var(--markdown-cell-background-color);
     border-radius: 0px;
 }
 
 div.cell.text_cell.selected {
     font-family: 'IBM Plex Sans';
     line-height: 170% !important;
-    background: var(--cell-background-color-main);
-    background-color: var(--cell-background-color-main);
+    background: var(--markdown-cell-background-color);
+    background-color: var(--markdown-cell-background-color);
     border-radius: 0px;
 }
 
 .edit_mode div.cell.text_cell.selected {
     font-family: 'IBM Plex Sans';
     line-height: 170% !important;
-    background: var(--cell-background-color-main);
-    background-color: var(--cell-background-color-main);
+    background: var(--markdown-cell-background-color);
+    background-color: var(--markdown-cell-background-color);
     border-radius: 0px;
 }
 
@@ -2138,8 +2140,8 @@ div.text_cell.unrendered.selected,
 div.edit_mode div.text_cell.unrendered {
     font-family: 'IBM Plex Sans';
     line-height: 170% !important;
-    background: var(--cell-background-color-main);
-    background-color: var(--cell-background-color-main);
+    background: var(--markdown-cell-background-color);
+    background-color: var(--markdown-cell-background-color);
     border-radius: 0px;
 }
 
@@ -2157,9 +2159,9 @@ div.cell.text_cell.rendered .prompt {
     text-align: right !important;
     min-width: 14.5ex !important;
     width: 14.5ex !important;
-    background-color: var(--cell-background-color-main);
+    background-color: var(--markdown-cell-background-color);
     border-right: 2px solid rgba(30, 67, 77, .5);
-    border-left: 4px solid var(--cell-background-color-secondary);
+    border-left: 4px solid var(--markdown-cell-background-color);
 }
 
 div.cell.text_cell.unrendered .prompt {
@@ -2171,8 +2173,8 @@ div.cell.text_cell.unrendered .prompt {
     min-width: 14.5ex !important;
     width: 14.5ex !important;
     border-right: 2px solid rgba(30, 67, 77, .5);
-    border-left: 4px solid var(--cell-background-color-secondary);
-    background-color: var(--cell-background-color-main);
+    border-left: 4px solid var(--markdown-cell-background-color);
+    background-color: var(--markdown-cell-background-color);
 }
 
 div.cell.text_cell.rendered .prompt {
@@ -2188,7 +2190,7 @@ div.cell.text_cell.rendered.selected .prompt {
 div.text_cell.unrendered.selected .prompt,
 div.text_cell.rendered.selected .prompt {
     top: 0;
-    background: var(--cell-background-color-main);
+    background: var(--markdown-cell-background-color);
     border-left: 4px solid #a38012;
     border-right: 2px solid rgba(30, 67, 77, .5);
 }
@@ -2279,8 +2281,8 @@ div.text_cell_render code {
     font-size: 11pt !important;
     line-height: 170% !important;
     color: #586e75;
-    background: var(--background-color-main);
-    background-color: var(--background-color-main);
+    background: var(--markdown-cell-background-color);
+    background-color: var(--markdown-cell-background-color);
     max-width: 80%;
     border-radius: 0px;
     border-left: none;
