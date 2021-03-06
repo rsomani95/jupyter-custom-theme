@@ -61,6 +61,7 @@
     --horizontal-rule-color: #d78585;
     --code-cursor-color: var(--code-cell-active-color);
     --code-cursor-thickness: 0.65em;
+    --cursor-opacity: 35%;
 }
 
 div#notebook {
@@ -3570,7 +3571,7 @@ div.CodeMirror-linenumber,
 
 .cm-s-ipython .CodeMirror-cursor {
     border-left: var(--code-cursor-thickness) solid var(--code-cursor-color) !important;
-    opacity: 35%;
+    opacity: var(--cursor-opacity);
 }
 
 /* Docstrings and comments */
@@ -3760,8 +3761,9 @@ div.cell.text_cell .cm-s-default span.cm-variable-3 {
 }
 
 .CodeMirror-cursor {
-    border-left: 2px solid #0095ff !important;
+    border-left: var(--code-cursor-thickness) solid var(--code-cursor-color) !important;
     border-right: none;
+    opacity: var(--cursor-opacity);
     width: 0;
 }
 
