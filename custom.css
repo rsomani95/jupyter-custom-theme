@@ -1,19 +1,30 @@
+/* This theme is modified from the Jupyter Themes project's
+/* solarizedd theme (See https://github.com/dunovank/jupyter-themes)
+/* 
+/* The overall philosophy of the modification is to parametris
+/*   as much as possible so one can quickly achieve a custom look
+/* This isn't the easiest because there's a LOT of ground to cover
+/* However, a majority of the theme has been captured in the CSS variable
+/*   defined below. The current values default to a custom dark theme
+/*   inspired by the VS Code Material Design Ocean High Contrast theme
+ */
+
 @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono);
 @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans);
 
 :root {
     /* Code Formatting Colors */
     --keyword-color: #82cfff;
-    --def-color: #edbc52;
+    --def-color: #FFCA57;
     --builtin-color: var(--def-color);
     --property-color: #FF6774;
     --number-color: #FF8663;
     --operator-color: #6DDFFF;
     --comment-color: #464b5d;
-    --string-color: #d78585;
+    --string-color: #b1a1a1c2;
     --variable-color: #82A6E9;
     --variable2-color: #a6accd;
-
+    --matching-bracket-color: #e3f0f4;
     /* Background Colors */
     --background-color-main: #0F111B;
     --background-color-secondary: #464b5d;
@@ -36,14 +47,20 @@
     --scrollbar-width: 8px;
     --scrollbar-height: 3.5px;
 
+    /* Hover Colors */
+    --primary-hover-color: var(--markdown-cell-background-color);
+    /* ?? Colors */
+    /* Works for Pandas table hovering */
+    --ancilliary-color-1: var(--markdown-cell-background-color);
+
     /* Font Sizes */
     --output-font-size: 13px;
 
     /* Other */
     --markdown-headings-color: #f791ac;
     --horizontal-rule-color: #d78585;
-    --code-cursor-color: #008faf;
-    --code-cursor-thickness: 0.7em;
+    --code-cursor-color: var(--code-cell-active-color);
+    --code-cursor-thickness: 0.65em;
 }
 
 div#notebook {
@@ -131,8 +148,8 @@ i.fa.fa-folder {
     font-size: 14pt;
     color: #586e75;
     padding: 8px 8px;
-    background: #002731;
-    background-color: #002731;
+    background: var(--ancilliary-color-1);
+    background-color: var(--ancilliary-color-1);
 }
 
 #running .panel-group .panel .panel-heading a {
@@ -1167,7 +1184,7 @@ div.kse-dropdown>.dropdown-menu,
     font-size: 13pt;
     background: transparent;
     background-color: transparent;
-    border: 0px solid #002731;
+    border: 0px solid var(--ancilliary-color-1);
     border-bottom: 2px solid transparent;
     margin-left: 5px;
     padding-top: 4px !important;
@@ -1181,7 +1198,7 @@ div.kse-dropdown>.dropdown-menu,
 .item_buttons>.input-group.active,
 .item_buttons>.btn.focus {
     margin-left: 5px;
-    background: #001f27;
+    background: var(--primary-hover-color);
     padding-top: 4px !important;
     background-color: transparent;
     border: 0px solid transparent;
@@ -1402,21 +1419,21 @@ a.btn.btn-default.input-group-addon:hover {
     position: relative;
     font-size: inherit;
     white-space: nowrap;
-    background: #002731;
-    background-color: #002731;
+    background: var(--ancilliary-color-1);
+    background-color: var(--ancilliary-color-1);
     border: none;
 }
 
 .input-group-btn:hover {
-    background: #001f27;
-    background-color: #001f27;
+    background: var(--primary-hover-color);
+    background-color: var(--primary-hover-color);
     border: none;
 }
 
 .input-group-btn:first-child>.btn,
 .input-group-btn:first-child>.btn-group {
-    background: #002731;
-    background-color: #002731;
+    background: var(--ancilliary-color-1);
+    background-color: var(--ancilliary-color-1);
     border: none;
     margin-left: 2px;
     margin-right: -1px;
@@ -1433,8 +1450,8 @@ a.btn.btn-default.input-group-addon:hover {
 }
 
 div.modal .btn-group>.btn:first-child {
-    background: #002731;
-    background-color: #002731;
+    background: var(--ancilliary-color-1);
+    background-color: var(--ancilliary-color-1);
     border: 1px solid #00232c;
     margin-top: 0px !important;
     margin-left: 0px;
@@ -1442,24 +1459,24 @@ div.modal .btn-group>.btn:first-child {
 }
 
 div.modal .btn-group>.btn:first-child:hover {
-    background: #001f27;
-    background-color: #001f27;
-    border: 1px solid #001f27;
+    background: var(--primary-hover-color);
+    background-color: var(--primary-hover-color);
+    border: 1px solid var(--primary-hover-color);
     transition: 200ms ease;
 }
 
 div.modal>button,
 div.modal-footer>button {
-    background: #002731;
-    background-color: #002731;
-    border-color: #002731;
+    background: var(--ancilliary-color-1);
+    background-color: var(--ancilliary-color-1);
+    border-color: var(--ancilliary-color-1);
 }
 
 div.modal>button:hover,
 div.modal-footer>button:hover {
-    background: #001f27;
-    background-color: #001f27;
-    border-color: #001f27;
+    background: var(--primary-hover-color);
+    background-color: var(--primary-hover-color);
+    border-color: var(--primary-hover-color);
     transition: 200ms ease;
 }
 
@@ -1467,8 +1484,8 @@ div.modal-footer>button:hover {
     font-family: 'IBM Plex Sans';
     font-size: 12.0pt;
     position: relative;
-    background: #002731;
-    background-color: #002731;
+    background: var(--ancilliary-color-1);
+    background-color: var(--ancilliary-color-1);
     border: none;
     border-radius: 0px;
     background-clip: padding-box;
@@ -1479,8 +1496,8 @@ div.modal-footer>button:hover {
     font-family: 'IBM Plex Sans';
     font-size: 13pt;
     color: #586e75;
-    background: #002731;
-    background-color: #002731;
+    background: var(--ancilliary-color-1);
+    background-color: var(--ancilliary-color-1);
     border-color: rgba(30, 67, 77, .5);
     padding: 12px;
     min-height: 16.4286px;
@@ -1540,8 +1557,8 @@ div.panel>.panel-heading,
 div.panel-default>.panel-heading {
     font-size: 14pt;
     color: #586e75;
-    background: #002731;
-    background-color: #002731;
+    background: var(--ancilliary-color-1);
+    background-color: var(--ancilliary-color-1);
     border: 0;
 }
 
@@ -2433,11 +2450,11 @@ div#_vivaldi-spatnav-focus-indicator._vivaldi-spatnav-focus-indicator {
 }
 
 .rendered_html thead {
-    font-family: sans-serif !important;
+    font-family: 'IBM Plex Sans' !important;
     font-size: 10.3pt !important;
-    background: #001f27;
+    background: var(--primary-hover-color);
     color: #93a1a1;
-    border-bottom: 1px solid #001f27;
+    border-bottom: 1px solid var(--primary-hover-color);
     vertical-align: bottom;
 }
 
@@ -2446,11 +2463,11 @@ div#_vivaldi-spatnav-focus-indicator._vivaldi-spatnav-focus-indicator {
 }
 
 .rendered_html tbody tr {
-    background: #001f27;
+    background: var(--primary-hover-color);
 }
 
 .rendered_html tbody tr:hover:nth-child(odd) {
-    background: #002731;
+    background: var(--ancilliary-color-1);
 }
 
 .rendered_html tbody tr:hover {
@@ -2837,30 +2854,30 @@ label#Keyword-Filter {
 
 .input-group .nbext-list-btn-add,
 .input-group-btn:last-child>.btn-group>.btn {
-    background: #002731;
-    background-color: #002731;
-    border-color: #002731;
-    border: 2px solid #002731;
+    background: var(--ancilliary-color-1);
+    background-color: var(--ancilliary-color-1);
+    border-color: var(--ancilliary-color-1);
+    border: 2px solid var(--ancilliary-color-1);
 }
 
 .input-group .nbext-list-btn-add:hover,
 .input-group-btn:last-child>.btn-group>.btn:hover {
-    background: #001f27;
-    background-color: #001f27;
-    border-color: #001f27;
-    border: 2px solid #001f27;
+    background: var(--primary-hover-color);
+    background-color: var(--primary-hover-color);
+    border-color: var(--primary-hover-color);
+    border: 2px solid var(--primary-hover-color);
 }
 
 #notebook-container>div.cell.code_cell.rendered.selected>div.widget-area>div.widget-subarea>div>div.widget_item.btn-group>button.btn.btn-default.dropdown-toggle.widget-combo-carrot-btn {
-    background: #002731;
-    background-color: #002731;
-    border-color: #002731;
+    background: var(--ancilliary-color-1);
+    background-color: var(--ancilliary-color-1);
+    border-color: var(--ancilliary-color-1);
 }
 
 #notebook-container>div.cell.code_cell.rendered.selected>div.widget-area>div.widget-subarea>div>div.widget_item.btn-group>button.btn.btn-default.dropdown-toggle.widget-combo-carrot-btn:hover {
-    background: #001f27;
-    background-color: #001f27;
-    border-color: #001f27;
+    background: var(--primary-hover-color);
+    background-color: var(--primary-hover-color);
+    border-color: var(--primary-hover-color);
 }
 
 .ui-widget-content {
@@ -2994,14 +3011,14 @@ video {
 }
 
 .cmd-palette form {
-    background: #002731;
-    background-color: #002731;
+    background: var(--ancilliary-color-1);
+    background-color: var(--ancilliary-color-1);
 }
 
 .typeahead-field input:last-child,
 .typeahead-hint {
-    background: #002731;
-    background-color: #002731;
+    background: var(--ancilliary-color-1);
+    background-color: var(--ancilliary-color-1);
     z-index: 1;
 }
 
@@ -3017,7 +3034,7 @@ video {
 }
 
 .typeahead-select {
-    background-color: #002731;
+    background-color: var(--ancilliary-color-1);
 }
 
 body>div.modal.cmd-palette.typeahead-field {
@@ -3029,7 +3046,7 @@ body>div.modal.cmd-palette.typeahead-field {
 .typeahead-container button {
     font-family: 'IBM Plex Sans';
     font-size: 28pt;
-    background-color: #002731;
+    background-color: var(--ancilliary-color-1);
     border: none;
     display: inline-block;
     line-height: inherit;
@@ -3048,7 +3065,7 @@ body>div.modal.cmd-palette.typeahead-field {
 .typeahead-container button:focus,
 .typeahead-container button:hover {
     color: #839496;
-    background-color: #001f27;
+    background-color: var(--primary-hover-color);
     border-color: #083e4b;
 }
 
@@ -3201,8 +3218,8 @@ span.shortcut_key {
 
 div#short-key-bindings-intro.well,
 .well {
-    background-color: #002731;
-    border: 1px solid #002731;
+    background-color: var(--ancilliary-color-1);
+    border: 1px solid var(--ancilliary-color-1);
     color: #586e75;
     border-radius: 0px;
     -webkit-box-shadow: none;
@@ -3504,6 +3521,10 @@ div.tooltiptext.bigtooltip {
     font-weight: normal;
 }
 
+out_prompt_overlay prompt:hover {
+    background-color: var(--ancilliary-color-1) !important;
+}
+
 .cm-s-ipython div.CodeMirror-selected {
     background: #062e39;
 }
@@ -3595,7 +3616,8 @@ div.CodeMirror-linenumber,
 }
 
 .cm-s-ipython span.cm-builtin {
-    color: #d33682;
+    color: var(--builtin-color);
+    font-style: italic;
 }
 
 .cm-s-ipython span.cm-variable {
@@ -3642,7 +3664,7 @@ div.CodeMirror-linenumber,
 }
 
 div.CodeMirror span.CodeMirror-matchingbracket {
-    color: #ffffff;
+    color: var(--matching-bracket-color);
     font-weight: bold;
     background-color: var(--background-color-main);
 }
