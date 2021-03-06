@@ -1,0 +1,205 @@
+/*This file contains any manual css for this page that needs to override the global styles.
+This is only required when different pages style the same element differently. This is just
+a hack to deal with our current css styles and no new styling should be added in this file.*/
+
+@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono);
+@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans);
+
+#ipython-main-app {
+    position: relative;
+}
+#jupyter-main-app {
+    position: relative;
+}
+
+
+body {
+    background-color: #0F111B !important;
+    color: wheat;
+    font-family: 'IBM Plex Sans';
+    caret-color: white !important;
+}
+
+/* Hide top level bar -- Jupyter logo, nb name, etc */
+div#header-container { 
+    display: none !important; 
+}
+
+/* `?` lookup  */
+div#pager pre, div#pager {
+    background-color: #0F111B !important;
+}
+
+#notebook-container {
+    width: 90%;
+    font-family: 'IBM Plex Sans';
+    font-size: 16px;
+    background-color: #0F111B !important;
+}
+
+/***************************************************/
+/**************** CODE FONT COLORS *****************/
+/***************************************************/
+
+.CodeMirror {
+    caret-color: white !important;
+    font-family: "IBM Plex Mono" !important;
+    font-size: 14px;
+    color: #6DDFFF !important;
+    background-color: #0F111B !important;
+}
+
+.cm-s-ipython {
+    background-color: #0F111B !important;
+}
+pre {
+    font-family: "IBM Plex Mono" !important;
+    font-size: 14px;
+    color: #82cfff !important;
+}
+
+/* if, not, `def`, `class`, from, is, not, import */
+.cm-keyword {
+    color: #82cfff !important;
+    font-style: italic;
+    /* color: #009d9a !important; */
+}
+
+/* function-names, class names */
+.cm-def {
+    color: #edbc52 !important;
+}
+/* isinstance, list, tuple */
+.cm-builtin {
+    color: #edbc52 !important;
+    font-style: italic;
+}
+
+/* attributes (of any level) self.**attr**.**2nd-attr* */
+.cm-property {
+    color: #FF6774 !important;
+}
+.cm-number {
+    color: #FF8663 !important;
+}
+.cm-operator {
+    color: #6DDFFF !important;
+}
+/* Docstrings and comments */
+.cm-comment {
+    color: #464b5d !important;
+    opacity: 100%;
+    font-style: italic;
+}
+.cm-string {
+    color: #d78585 !important;
+    opacity: 100%;
+    /* font-style: italic; */
+}
+
+.cm-variable {
+    color: #82A6E9 !important;
+}
+/* self */
+.cm-variable-2 {
+    color: #a6accd !important;
+}
+
+/***************************************************/
+
+/**************** Code Cell Colors ********************/
+
+div.input_area {
+    border: 0px; 
+}
+div.input_prompt, div.output_prompt {
+    color: #464b5d !important;
+}
+
+/* .CodeMirror-cursor {
+    color: olive !important;
+} */
+/* When inside a cell  */
+div.cell.selected {
+    border-color: transparent;
+}
+div.cell.selected:before {
+    background-color: #d78585 !important;
+}
+.edit_mode div.cell.selected:before {
+    background-color: #edbc52 !important;
+}
+.edit_mode div.cell.selected {
+    border-color: transparent;
+}
+
+/**************** Markdown Cells ********************/
+
+h1,h2,h3,h4,h5,h6 {
+    color: #f791ac !important;
+}
+
+.cm-header {
+    color: #f791ac !important;
+}
+
+.text_cell {
+    background-color: #1a1d30 !important;
+}
+.rendered_html {
+    color: #ff8389 !important;
+}
+
+.cm-tag,.cm-bracket {
+    color: #6DDFFF !important;
+}
+
+.CodeMirror-line[role="presentation"] {
+    /* color: #f791ac !important; */
+}
+
+/****************** Jupyter Output Cells ********************/
+table.dataframe {
+    background-color: #edebeb !important;
+    border-radius: 4px;
+
+}
+th[role="columnheader"] {
+    text-align: center;
+    font-size: 1.05em;
+}
+
+/**************** Navigation Tab ********************/
+.list_container > div {
+    border-bottom: 0px solid white;
+}
+a.item_link {
+    color: #ff8389 !important;
+}
+.pull-right {
+    color: #f791ac !important;
+}
+.list_container {
+    border: transparent !important;
+}
+#notebook_list_header {
+    background-color: #510224 !important;
+}
+
+/* This was a failed attempt at changing the mouse cursor values */
+
+input,
+textarea {
+    font-size: 24px;
+    padding: 10px;
+    
+    color: yellow !important;
+    text-shadow: 0px 0px 0px #000;
+    -webkit-text-fill-color: transparent;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{
+    color: yellow !important;
+    text-shadow: none;
+    -webkit-text-fill-color: initial;
+}
