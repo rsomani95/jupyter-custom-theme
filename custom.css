@@ -1,6 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono);
 @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans);
 
+:root {
+    --keyword-color: #82cfff;
+    --def-color: #edbc52;
+    --builtin-color: var(--def-color);
+    --property-color: #FF6774;
+    --number-color: #FF8663;
+    --operator-color: #6DDFFF;
+    --comment-color: #464b5d;
+    --string-color: #d78585;
+    --variable-color: #82A6E9;
+    --variable2-color: #a6accd;
+}
+
 div#notebook {
     font-family: 'IBM Plex Sans';
     font-size: 13pt;
@@ -3504,8 +3517,9 @@ div.CodeMirror-linenumber,
     opacity: 35%;
 }
 
+/* Docstrings and comments */
 .cm-s-ipython span.cm-comment {
-    color: #93a1a1;
+    color: var(--comment-color);
     font-style: italic;
 }
 
@@ -3514,24 +3528,27 @@ div.CodeMirror-linenumber,
 }
 
 .cm-s-ipython span.cm-number {
-    color: #2aa198;
+    color: var(--number-color);
 }
 
+/* attributes (of any level) self.**attr**.**2nd-attr* */
 .cm-s-ipython span.cm-property {
-    color: #586e75;
+    color: var(--property-color);
 }
 
 .cm-s-ipython span.cm-attribute {
     color: #586e75;
 }
 
+/* if, not, `def`, `class`, from, is, not, import */
 .cm-s-ipython span.cm-keyword {
-    color: #859900;
+    color: var(--keyword-color);
     font-weight: normal;
+    font-style: italic;
 }
 
 .cm-s-ipython span.cm-string {
-    color: #2aa198;
+    color: var(--string-color);
 }
 
 .cm-s-ipython span.cm-meta {
@@ -3539,7 +3556,7 @@ div.CodeMirror-linenumber,
 }
 
 .cm-s-ipython span.cm-operator {
-    color: #d33682;
+    color: var(--operator-color);
 }
 
 .cm-s-ipython span.cm-builtin {
@@ -3547,19 +3564,21 @@ div.CodeMirror-linenumber,
 }
 
 .cm-s-ipython span.cm-variable {
-    color: #586e75;
+    color: var(--variable-color);
 }
 
+/* self */
 .cm-s-ipython span.cm-variable-2 {
-    color: #586e75;
+    color: var(--variable2-color);
 }
 
 .cm-s-ipython span.cm-variable-3 {
     color: #586e75;
 }
 
+/* function-names, class names */
 .cm-s-ipython span.cm-def {
-    color: #268bd2;
+    color: var(--def-color);
     font-weight: normal;
 }
 
@@ -3632,7 +3651,7 @@ div.cell.text_cell .cm-s-default .cm-header {
 }
 
 div.cell.text_cell .cm-s-default span.cm-variable-2 {
-    color: #586e75 !important;
+    color: var(--variable2-color) !important;
 }
 
 div.cell.text_cell .cm-s-default span.cm-variable-3 {
@@ -3640,27 +3659,31 @@ div.cell.text_cell .cm-s-default span.cm-variable-3 {
 }
 
 .cm-s-default span.cm-comment {
-    color: #93a1a1 !important;
+    color: var(--comment-color) !important;
+    font-style: italic;
 }
 
 .cm-s-default .cm-tag {
     color: #586e75;
 }
 
+/* isinstance, list, tuple */
 .cm-s-default .cm-builtin {
-    color: #d33682;
+    color: var(--builtin-color);
+    font-style: italic;
 }
 
 .cm-s-default .cm-string {
-    color: #2aa198;
+    color: var(--string-color);
 }
 
 .cm-s-default .cm-keyword {
-    color: #859900;
+    color: var(--keyword-color);
+    font-style: italic;
 }
 
 .cm-s-default .cm-number {
-    color: #2aa198;
+    color: var(--number-color);
 }
 
 .cm-s-default .cm-error {
@@ -3676,7 +3699,7 @@ div.cell.text_cell .cm-s-default span.cm-variable-3 {
 }
 
 .cm-s-default .cm-def {
-    color: #268bd2;
+    color: var(--def-color);
 }
 
 .CodeMirror-cursor {
