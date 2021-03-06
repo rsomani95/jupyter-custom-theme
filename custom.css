@@ -25,10 +25,16 @@
 
     /* Border Colors */
     --cell-border: transparent;
-    --border-color-1: #d78585;
-    --code-cell-active-color: rgb(199, 113, 6);
-    --code-cell-passive-color: #d78585;
+    --text-cell-active-color: var(--markdown-headings-color);
+    --code-cell-active-color: #4CADCC;
+    --text-cell-passive-color: #C2627D;
+    --code-cell-passive-color: #303354;
 
+    /* Scrollbars */
+    --scrollbar-main-background-color: var(--background-color-main);
+    --scrollbar-scroller-color: var(--markdown-cell-background-color);
+    --scrollbar-width: 8px;
+    --scrollbar-height: 3.5px;
 
     /* Font Sizes */
     --output-font-size: 13px;
@@ -299,7 +305,7 @@ span#login_widget>.button.active,
 #logout.active,
 .open>.dropdown-togglespan#login_widget>.button,
 .open>.dropdown-toggle#logout {
-    color: var(--border-color-1);
+    color: var(--text-cell-passive-color);
     background-color: #586e75;
     background: #586e75;
     border-color: #586e75;
@@ -682,7 +688,7 @@ p.navbar-text.indicator_area {
 .navbar-default .navbar-nav>.open>a,
 .navbar-default .navbar-nav>.open>a:hover,
 .navbar-default .navbar-nav>.open>a:focus {
-    color: var(--border-color-1);
+    color: var(--text-cell-passive-color);
     background-color: var(--background-color-main);
     border-color: #002b36;
     line-height: 1.5em;
@@ -1132,7 +1138,7 @@ div.kse-dropdown>.dropdown-menu,
 .btn-default.active:focus,
 .btn-default:active.focus,
 .btn-default.active.focus {
-    color: var(--border-color-1) !important;
+    color: var(--text-cell-passive-color) !important;
     background-color: var(--cell-background-color-main);
     border-color: #856c21 !important;
     transition: 2000ms ease;
@@ -1146,7 +1152,7 @@ div.kse-dropdown>.dropdown-menu,
 .btn.active,
 .btn:active.focus,
 .btn.active.focus {
-    color: var(--border-color-1) !important;
+    color: var(--text-cell-passive-color) !important;
     outline: none !important;
     outline-width: 0px !important;
     background: #856c21 !important;
@@ -1646,26 +1652,27 @@ div.output.output_scroll {
 }
 
 ::-webkit-scrollbar {
-    width: 11px;
-    max-height: 9px;
-    background-color: #004355;
+    width: var(--scrollbar-width);
+    max-height: var(--scrollbar-height);
+    background-color: red !important;
     border-radius: 0px;
     border: none;
 }
 
 ::-webkit-scrollbar-track {
-    background: #004355;
+    background: var(--scrollbar-main-background-color);
     border: none;
-    width: 11px;
-    max-height: 9px;
+    width: var(--scrollbar-width);
+    max-height: var(--scrollbar-height);
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 0px;
+    border-radius: 3px;
     border: none;
-    background: #586e75;
+    background: var(--scrollbar-scroller-color);
     background-clip: content-box;
-    width: 11px;
+    width: var(--scrollbar-width);
+    max-height: 20px;
 }
 
 HTML,
@@ -1774,7 +1781,7 @@ div.cell.text_cell.selected:before,
 div.cell.text_cell.selected.jupyter-soft-selected:before {
     background: var(--markdown-cell-background-color) !important;
     background-color: var(--markdown-cell-background-color) !important;
-    border-color: var(--border-color-1) !important;
+    border-color: var(--text-cell-active-color) !important;
 }
 
 div.cell.code_cell .input {
@@ -1840,10 +1847,10 @@ div.cell.text_cell.selected.jupyter-soft-selected .input_prompt {
 
 div.cell.text_cell.jupyter-soft-selected,
 div.cell.text_cell.selected.jupyter-soft-selected {
-    border-left-color: var(--border-color-1) !important;
+    border-left-color: var(--text-cell-passive-color) !important;
     border-left-width: 0px !important;
     padding-left: 26px !important;
-    border-right-color: var(--border-color-1) !important;
+    border-right-color: var(--text-cell-passive-color) !important;
     border-right-width: 0px !important;
     background: var(--markdown-cell-background-color) !important;
     border-radius: 0px !important;
@@ -2061,7 +2068,7 @@ div.cell.code_cell .output_prompt {
 
 div.cell.selected .output_prompt,
 div.cell.selected .out_prompt_overlay.prompt {
-    border-left: 5px solid var(--border-color-1);
+    border-left: 5px solid var(--code-cell-passive-color);
     /* border-right: 2px solid #002b36; */
     border-radius: 0px !important;
 }
@@ -2191,7 +2198,7 @@ div.cell.text_cell.rendered .prompt {
 
 div.cell.text_cell.rendered.selected .prompt {
     top: 0;
-    border-left: 4px solid var(--border-color-1);
+    border-left: 5px solid var(--text-cell-passive-color);
     border-right: 2px solid rgba(30, 67, 77, .5);
 }
 
@@ -2199,7 +2206,7 @@ div.text_cell.unrendered.selected .prompt,
 div.text_cell.rendered.selected .prompt {
     top: 0;
     background: var(--markdown-cell-background-color);
-    border-left: 4px solid var(--border-color-1);
+    border-left: 5px solid var(--text-cell-passive-color);
     border-right: 2px solid rgba(30, 67, 77, .5);
 }
 
@@ -2642,7 +2649,7 @@ div.nbext-selector>nav>.nav>li.active:hover {
 .nav-pills>li.active>a:active,
 .nav-pills>li.active>a:hover,
 .nav-pills>li.active>a:focus {
-    color: var(--border-color-1);
+    color: var(--text-cell-passive-color);
     background-color: rgba(30, 67, 77, .3) !important;
     background: rgba(30, 67, 77, .3) !important;
     -webkit-backface-visibility: hidden;
@@ -2949,7 +2956,7 @@ div.collapsible_headings_toggle .fa-caret-right:before {
 #toc a:hover,
 #navigate_menu a:hover,
 .toc {
-    color: var(--border-color-1) !important;
+    color: var(--text-cell-passive-color) !important;
     font-size: 11pt !important;
 }
 
@@ -3426,7 +3433,7 @@ span.ansicyan,
 span.ansiyellow,
 .ansi-yellow-fg,
 .ansi-yellow-intense-fg {
-    color: var(--border-color-1);
+    color: var(--text-cell-passive-color);
 }
 
 span.ansired,
