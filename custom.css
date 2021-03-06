@@ -49,9 +49,25 @@
 
     /* Hover Colors */
     --primary-hover-color: var(--markdown-cell-background-color);
+    --table-odd-hover-color: #22273f;
+    --table-even-hover-color: #22263f;
+    --table-font-color: #93a1a1;
+    --table-border-color: #ddd;
+    --table-head-border-thickness: 1px;
+    --table-cell-border: transparent;
+
     /* ?? Colors */
     /* Works for Pandas table hovering */
     --ancilliary-color-1: var(--markdown-cell-background-color);
+    --ancilliary-color-2: var(--markdown-cell-background-color);
+    /* Default font color everywhere - code commas, top navbar
+    /* Output cell nos */
+    --ancilliary-color-3: #586e75;
+
+    --ancilliary-color-4: #083e4b;
+    --ancilliary-color-5: #657b83;
+    --ancilliary-color-6: red;
+    --ancilliary-color-7: var(--markdown-cell-background-color);
 
     /* Font Sizes */
     --output-font-size: 13px;
@@ -68,7 +84,7 @@ div#notebook {
     font-family: 'IBM Plex Sans';
     font-size: 13pt;
     line-height: 170%;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     -webkit-font-smoothing: antialiased !important;
     padding-top: 25px !important;
 }
@@ -77,7 +93,7 @@ body,
 div.body {
     font-family: 'IBM Plex Sans';
     font-size: 13pt;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     background-color: var(--background-color-main);
     background: var(--background-color-main);
     -webkit-font-smoothing: antialiased !important;
@@ -93,7 +109,7 @@ body.notebook_app {
 
 a {
     font-family: 'IBM Plex Sans';
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     -webkit-font-smoothing: antialiased !important;
 }
 
@@ -147,7 +163,7 @@ i.fa.fa-folder {
 
 #running .panel-group .panel .panel-heading {
     font-size: 14pt;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     padding: 8px 8px;
     background: var(--ancilliary-color-1);
     background-color: var(--ancilliary-color-1);
@@ -155,13 +171,13 @@ i.fa.fa-folder {
 
 #running .panel-group .panel .panel-heading a {
     font-size: 14pt;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 #running .panel-group .panel .panel-heading a:focus,
 #running .panel-group .panel .panel-heading a:hover {
     font-size: 14pt;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 #running .panel-group .panel .panel-body .list_container .list_item {
@@ -208,7 +224,7 @@ div.running_list_info.toolbar_info {
 }
 
 #project_name>ul>li>a>i.fa.fa-home {
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     font-size: 17pt;
     display: inline-block;
     position: static;
@@ -232,7 +248,7 @@ div.running_list_info.toolbar_info {
 
 span#last-modified.btn.btn-xs.btn-default.sort-action:hover .fa,
 span#sort-name.btn.btn-xs.btn-default.sort-action:hover .fa {
-    color: #657b83;
+    color: var(--ancilliary-color-5);
 }
 
 .folder_icon:before {
@@ -284,13 +300,13 @@ span#sort-name.btn.btn-xs.btn-default.sort-action:hover .fa {
 div#notebook_toolbar div.dynamic-instructions {
     font-family: 'IBM Plex Sans';
     font-size: 17px;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 span#login_widget>.button,
 #logout {
     font-family: 'IBM Plex Sans';
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     background: transparent;
     background-color: transparent;
     border: 2px solid var(--cell-background-color-secondary);
@@ -304,10 +320,10 @@ span#login_widget>.button,
 
 span#login_widget>.button:hover,
 #logout:hover {
-    color: #657b83;
+    color: var(--ancilliary-color-5);
     background-color: transparent;
     background: transparent;
-    border: 2px solid #657b83;
+    border: 2px solid var(--ancilliary-color-5);
     background-image: none;
     box-shadow: none !important;
     border-radius: 0px;
@@ -324,9 +340,9 @@ span#login_widget>.button.active,
 .open>.dropdown-togglespan#login_widget>.button,
 .open>.dropdown-toggle#logout {
     color: var(--text-cell-passive-color);
-    background-color: #586e75;
-    background: #586e75;
-    border-color: #586e75;
+    background-color: var(--ancilliary-color-3);
+    background: var(--ancilliary-color-3);
+    border-color: var(--ancilliary-color-3);
     background-image: none;
     box-shadow: none !important;
     border-radius: 0px;
@@ -349,13 +365,13 @@ body>#header {
 
 .list_container {
     font-size: 13pt;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     border: none;
     text-shadow: none !important;
 }
 
 .list_container>div {
-    border-bottom: 1px solid rgba(30, 67, 77, .3);
+    border-bottom: 1px solid var(--ancilliary-color-7);
     font-size: 13pt;
 }
 
@@ -452,7 +468,7 @@ i.fa.fa-trash {
 
 .list_container a {
     font-size: 16px;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     border: none;
     text-shadow: none !important;
     font-weight: normal;
@@ -479,7 +495,7 @@ div.list_item:hover {
 
 .breadcrumb>li {
     font-size: 12.0pt;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     border: none;
     text-shadow: none !important;
 }
@@ -487,7 +503,7 @@ div.list_item:hover {
 .breadcrumb>li+li:before {
     content: "/\00a0";
     padding: 0px;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     font-size: 18px;
 }
 
@@ -527,7 +543,7 @@ ul#tabs a {
 .nav-tabs>li.active>a,
 .nav-tabs>li.active>a:hover,
 .nav-tabs>li.active>a:focus {
-    color: #657b83;
+    color: var(--ancilliary-color-5);
     background-color: transparent;
     border-color: transparent;
     border-bottom: 2px solid transparent;
@@ -535,7 +551,7 @@ ul#tabs a {
 
 .nav>li.disabled>a,
 .nav>li.disabled>a:hover {
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 .nav-tabs>li>a:before {
@@ -545,7 +561,7 @@ ul#tabs a {
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: #657b83;
+    background-color: var(--ancilliary-color-5);
     visibility: hidden;
     -webkit-transform: perspective(0)scaleX(0);
     transform: perspective(0)scaleX(0);
@@ -567,7 +583,7 @@ ul#tabs a {
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: #657b83;
+    background-color: var(--ancilliary-color-5);
     visibility: visible;
     -webkit-transform: perspective(1)scaleX(1);
     transform: perspective(1)scaleX(1);
@@ -621,7 +637,7 @@ div#header-container {
 .edit_app #header {
     box-shadow: none !important;
     background-color: var(--background-color-main);
-    border-bottom: 2px solid rgba(30, 67, 77, .3);
+    border-bottom: 2px solid var(--ancilliary-color-7);
 }
 
 #header,
@@ -672,14 +688,14 @@ div.navbar-text,
 p.navbar-text.indicator_area {
     margin-top: 8px !important;
     margin-bottom: 0px;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 .navbar-default {
     font-family: 'IBM Plex Sans';
     font-size: 13pt;
     background-color: var(--background-color-main);
-    border-color: rgba(30, 67, 77, .3);
+    border-color: var(--ancilliary-color-7);
     line-height: 1.5em;
     padding-bottom: 0px;
 }
@@ -687,7 +703,7 @@ p.navbar-text.indicator_area {
 .navbar-default .navbar-nav>li>a {
     font-family: 'IBM Plex Sans';
     font-size: 13pt;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     display: block;
     line-height: 1.5em;
     padding-top: 14px;
@@ -697,8 +713,8 @@ p.navbar-text.indicator_area {
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus {
     color: #839496 !important;
-    background-color: rgba(30, 67, 77, .3) !important;
-    border-color: rgba(30, 67, 77, .3) !important;
+    background-color: var(--ancilliary-color-7) !important;
+    border-color: var(--ancilliary-color-7) !important;
     line-height: 1.5em;
     transition: 80ms ease;
 }
@@ -734,7 +750,7 @@ div.notification_widget.info,
 div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn,
 div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn:hover,
 div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn:focus {
-    color: #586e75 !important;
+    color: var(--ancilliary-color-3) !important;
     background-color: transparent !important;
     border-color: transparent !important;
     padding-bottom: 0px !important;
@@ -775,7 +791,7 @@ div.notification_widget {
     border: none !important;
     background: transparent !important;
     background-color: transparent !important;
-    color: #586e75 !important;
+    color: var(--ancilliary-color-3) !important;
 }
 
 div.notification_widget.info,
@@ -828,7 +844,7 @@ div.notification_widget.info,
     background-color: transparent;
     margin-bottom: 0px !important;
     vertical-align: bottom !important;
-    color: #586e75 !important;
+    color: var(--ancilliary-color-3) !important;
     cursor: default !important;
 }
 
@@ -858,10 +874,10 @@ div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn {
 
 #kernel_indicator {
     float: right !important;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     background: var(--background-color-main);
     background-color: var(--background-color-main);
-    border-left: 2px solid #586e75;
+    border-left: 2px solid var(--ancilliary-color-3);
     padding-top: 0px;
     padding-bottom: 4px;
     margin-top: 10px !important;
@@ -871,7 +887,7 @@ div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn {
 
 #kernel_indicator .kernel_indicator_name {
     font-size: 17px;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     background: var(--background-color-main);
     background-color: var(--background-color-main);
     padding-left: 5px;
@@ -951,7 +967,7 @@ div.notification_widget.info,
 div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn,
 div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn:hover,
 div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn:focus {
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     background-color: var(--background-color-main);
     border-color: #002b36;
 }
@@ -1024,7 +1040,7 @@ i.fa.fa-icon {
     font-size: 12.0pt;
     display: block;
     padding: 10px 20px 9px 10px;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     background-color: var(--background-color-main);
     background: var(--background-color-main);
 }
@@ -1032,9 +1048,9 @@ i.fa.fa-icon {
 .dropdown-menu>li>a:hover,
 .dropdown-menu>li>a:focus {
     color: #839496;
-    background-color: rgba(30, 67, 77, .3);
-    background: rgba(30, 67, 77, .3);
-    border-color: rgba(30, 67, 77, .3);
+    background-color: var(--ancilliary-color-7);
+    background: var(--ancilliary-color-7);
+    border-color: var(--ancilliary-color-7);
     transition: 200ms ease;
 }
 
@@ -1061,7 +1077,7 @@ i.fa.fa-icon {
     font-family: 'IBM Plex Sans';
     font-size: 12.0pt;
     font-weight: normal;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     padding: none;
     display: block;
     clear: both;
@@ -1069,7 +1085,7 @@ i.fa.fa-icon {
 }
 
 .dropdown-submenu>a:after {
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     margin-right: -16px;
     margin-top: 0px;
     display: inline-block;
@@ -1079,7 +1095,7 @@ i.fa.fa-icon {
 .dropdown-submenu:active>a:after,
 .dropdown-submenu:focus>a:after,
 .dropdown-submenu:visited>a:after {
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     margin-right: -16px;
     display: inline-block !important;
 }
@@ -1093,7 +1109,7 @@ div.kse-dropdown>.dropdown-menu,
 .btn,
 .btn-default {
     font-family: 'IBM Plex Sans';
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     background: var(--cell-background-color-main);
     background-color: var(--cell-background-color-main);
     border: 2px solid var(--cell-background-color-secondary);
@@ -1110,10 +1126,10 @@ div.kse-dropdown>.dropdown-menu,
 .btn-default:hover,
 .open>.dropdown-toggle.btn-default:hover,
 .open>.dropdown-toggle.btn:hover {
-    color: #657b83;
-    border: 2px solid #083e4b;
-    background-color: #083e4b;
-    background: #083e4b;
+    color: var(--ancilliary-color-5);
+    border: 2px solid var(--ancilliary-color-4);
+    background-color: var(--ancilliary-color-4);
+    background: var(--ancilliary-color-4);
     background-image: none;
     box-shadow: none !important;
     border-radius: 0px;
@@ -1141,10 +1157,10 @@ div.kse-dropdown>.dropdown-menu,
 .open>.dropdown-toggle.btn-default:focus,
 .open>.dropdown-toggle.btn-default.hover,
 .open>.dropdown-toggle.btn-default.focus {
-    color: #657b83;
-    border: 2px solid #083e4b;
-    background-color: #083e4b !important;
-    background: #083e4b !important;
+    color: var(--ancilliary-color-5);
+    border: 2px solid var(--ancilliary-color-4);
+    background-color: var(--ancilliary-color-4) !important;
+    background: var(--ancilliary-color-4) !important;
     background-image: none;
     box-shadow: none !important;
     border-radius: 0px;
@@ -1203,7 +1219,7 @@ div.kse-dropdown>.dropdown-menu,
     padding-top: 4px !important;
     background-color: transparent;
     border: 0px solid transparent;
-    border-bottom: 2px solid #586e75;
+    border-bottom: 2px solid var(--ancilliary-color-3);
     border-radius: 0px;
     transition: none;
 }
@@ -1318,9 +1334,9 @@ div.dynamic-buttons>button,
 }
 
 .dropdown-header {
-    font-family: sans-serif !important;
+    font-family: "IBM Plex Sans" !important;
     font-size: 13pt !important;
-    color: #586e75 !important;
+    color: var(--ancilliary-color-3) !important;
     border-bottom: none !important;
     padding: 0px !important;
     margin: 6px 6px 0px !important;
@@ -1334,7 +1350,7 @@ span#file-size.btn.btn-xs.btn-default.sort-action {
     background-color: transparent;
     background: transparent;
     border: none;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     padding-bottom: 0px;
     margin-bottom: 0px;
     vertical-align: sub;
@@ -1394,7 +1410,7 @@ fieldset[disabled] .btn-default.focus {
     font-size: 13pt;
     font-weight: normal;
     height: auto;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     text-align: center;
     background-color: transparent;
     border: 2px solid transparent !important;
@@ -1413,7 +1429,7 @@ a.btn.btn-default.input-group-addon:hover {
 }
 
 .btn-group>.btn+.dropdown-toggle:hover {
-    background: #083e4b !important;
+    background: var(--ancilliary-color-4) !important;
 }
 
 .input-group-btn {
@@ -1443,8 +1459,8 @@ a.btn.btn-default.input-group-addon:hover {
 
 .input-group-btn:first-child>.btn:hover,
 .input-group-btn:first-child>.btn-group:hover {
-    background: #083e4b;
-    background-color: #083e4b;
+    background: var(--ancilliary-color-4);
+    background-color: var(--ancilliary-color-4);
     border: none;
     font-size: inherit;
     transition: 200ms ease;
@@ -1496,7 +1512,7 @@ div.modal-footer>button:hover {
 .modal-header {
     font-family: 'IBM Plex Sans';
     font-size: 13pt;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     background: var(--ancilliary-color-1);
     background-color: var(--ancilliary-color-1);
     border-color: rgba(30, 67, 77, .5);
@@ -1507,7 +1523,7 @@ div.modal-footer>button:hover {
 .modal-content h4 {
     font-family: 'IBM Plex Sans';
     font-size: 16pt;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     padding: 5px;
 }
 
@@ -1527,7 +1543,7 @@ div.modal-footer>button:hover {
 .alert-info {
     background-color: var(--cell-background-color-main);
     border-color: rgba(30, 67, 77, .5);
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 .modal-header .close {
@@ -1548,7 +1564,7 @@ div.panel-default,
     font-family: 'IBM Plex Sans';
     font-size: 13pt;
     background-color: var(--cell-background-color-main);
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     margin-bottom: 14px;
     border: 0;
     box-shadow: none;
@@ -1557,7 +1573,7 @@ div.panel-default,
 div.panel>.panel-heading,
 div.panel-default>.panel-heading {
     font-size: 14pt;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     background: var(--ancilliary-color-1);
     background-color: var(--ancilliary-color-1);
     border: 0;
@@ -1579,9 +1595,9 @@ div.form-control,
 .form-control {
     font-family: 'IBM Plex Sans';
     font-size: initial;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     background-color: #084150;
-    border: 1px solid #052730 !important;
+    border: 1px solid var(--ancilliary-color-6) !important;
     margin-left: 2px;
     box-shadow: none;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
@@ -1593,7 +1609,7 @@ div.form-control,
 }
 
 .form-group.list-group-item {
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     background-color: var(--cell-background-color-main);
     border-color: rgba(30, 67, 77, .5);
     margin-bottom: 0px;
@@ -1633,25 +1649,25 @@ select.form-control.select-xs {
 }
 
 .form-control:focus {
-    border-color: #586e75;
+    border-color: var(--ancilliary-color-3);
     outline: 2px solid var(--code-cell-active-color);
     -webkit-box-shadow: none;
 }
 
 ::-webkit-input-placeholder {
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 ::-moz-placeholder {
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 :-ms-input-placeholder {
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 :-moz-placeholder {
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 [dir="ltr"] #find-and-replace .input-group-btn+.form-control {
@@ -1659,7 +1675,7 @@ select.form-control.select-xs {
 }
 
 [dir="ltr"] #find-and-replace .input-group-btn+.form-control:focus {
-    border-color: #586e75;
+    border-color: var(--ancilliary-color-3);
     outline: 2px solid var(--code-cell-active-color);
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -1884,7 +1900,7 @@ div.prompt,
     font-family: "IBM Plex Mono";
     font-size: 9pt !important;
     font-weight: normal;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     line-height: 170%;
     padding: 0px;
     padding-top: 4px;
@@ -1942,14 +1958,14 @@ div.code_cell:hover div.input .run_this_cell {
 }
 
 div.cell.code_cell.rendered.selected .run_this_cell:hover {
-    background-color: #052730;
-    background: #052730;
+    background-color: var(--ancilliary-color-6);
+    background: var(--ancilliary-color-6);
     color: var(--code-cell-passive-color) !important;
 }
 
 div.cell.code_cell.rendered.unselected .run_this_cell:hover {
-    background-color: #052730;
-    background: #052730;
+    background-color: var(--ancilliary-color-6);
+    background: var(--ancilliary-color-6);
     color: var(--code-cell-passive-color) !important;
 }
 
@@ -1988,7 +2004,7 @@ div.output_subarea.output_text {
     font-size: 8.5pt !important;
     line-height: 150% !important;
     background-color: var(--background-color-main);
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
     margin-left: 11.5px;
@@ -1998,7 +2014,7 @@ div.output_area pre {
     font-family: "IBM Plex Mono";
     font-size: var(--output-font-size) !important;
     line-height: 151% !important;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
 }
@@ -2010,7 +2026,7 @@ div.output_area {
 div.output_html {
     font-family: "IBM Plex Mono";
     font-size: 8.5pt;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     background-color: var(--background-color-main);
     background: var(--background-color-main);
 }
@@ -2066,7 +2082,7 @@ div.out_prompt_overlay.prompt {
 }
 
 div.out_prompt_overlay.prompt:hover {
-    background-color: #05262f;
+    background-color: var(--primary-hover-color);
     box-shadow: none !important;
     border: none;
     border-bottom-left-radius: 0px;
@@ -2076,7 +2092,7 @@ div.out_prompt_overlay.prompt:hover {
     border-top-left-radius: 0px;
     min-width: 11.5ex !important;
     width: 11.5ex !important;
-    border-right: 2px solid #05262f !important;
+    border-right: 2px solid var(--primary-hover-color) !important;
 }
 
 div.cell.code_cell .output_prompt {
@@ -2104,7 +2120,7 @@ div.text_cell_render {
     font-family: 'IBM Plex Sans';
     font-size: 13pt;
     line-height: 130% !important;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     background: var(--markdown-cell-background-color);
     background-color: var(--markdown-cell-background-color);
     border-radius: 0px;
@@ -2188,7 +2204,7 @@ div.cell.text_cell.rendered .prompt {
     font-family: "IBM Plex Mono";
     font-size: 9.5pt !important;
     font-weight: normal;
-    color: #586e75 !important;
+    color: var(--ancilliary-color-3) !important;
     text-align: right !important;
     min-width: 14.5ex !important;
     width: 14.5ex !important;
@@ -2201,7 +2217,7 @@ div.cell.text_cell.unrendered .prompt {
     font-family: "IBM Plex Mono";
     font-size: 9.5pt !important;
     font-weight: normal;
-    color: #586e75 !important;
+    color: var(--ancilliary-color-3) !important;
     text-align: right !important;
     min-width: 14.5ex !important;
     width: 14.5ex !important;
@@ -2233,9 +2249,9 @@ div.rendered_html code {
     font-size: 11pt;
     padding-top: 3px;
     padding-left: 2px;
-    color: #586e75;
-    background: #052730;
-    background-color: #052730;
+    color: var(--ancilliary-color-3);
+    background: var(--ancilliary-color-6);
+    background-color: var(--ancilliary-color-6);
 }
 
 pre,
@@ -2250,17 +2266,17 @@ code {
     font-family: "IBM Plex Mono";
     font-size: 11pt !important;
     line-height: 170% !important;
-    color: #586e75;
-    background: #052730;
-    background-color: #052730;
-    border-color: #052730;
+    color: var(--ancilliary-color-3);
+    background: var(--ancilliary-color-6);
+    background-color: var(--ancilliary-color-6);
+    border-color: var(--ancilliary-color-6);
 }
 
 kbd {
     padding: 1px;
     font-size: 11pt;
     font-weight: 800;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     background-color: transparent !important;
     border: 0;
     box-shadow: none;
@@ -2272,14 +2288,14 @@ pre {
     margin: 0 0 9px;
     font-size: 12.0pt;
     line-height: 1.42857143;
-    color: #586e75;
-    background-color: #052730;
-    border: 1px solid #052730;
+    color: var(--ancilliary-color-3);
+    background-color: var(--ancilliary-color-6);
+    border: 1px solid var(--ancilliary-color-6);
     border-radius: 0px;
 }
 
 div.rendered_html {
-    color: #586e75;
+    color: var(--variable2-color);
 }
 
 .rendered_html *+ul {
@@ -2296,12 +2312,12 @@ div.rendered_html pre {
     font-family: "IBM Plex Mono";
     font-size: 11pt !important;
     line-height: 170% !important;
-    color: #586e75 !important;
-    background: #052730;
-    background-color: #052730;
+    color: var(--ancilliary-color-3) !important;
+    background: var(--ancilliary-color-6);
+    background-color: var(--ancilliary-color-6);
     max-width: 80%;
     border-radius: 0px;
-    border-left: 3px solid #052730;
+    border-left: 3px solid var(--ancilliary-color-6);
     max-width: 80%;
     border-radius: 0px;
     padding-left: 5px;
@@ -2313,7 +2329,7 @@ div.text_cell_render code {
     font-family: "IBM Plex Mono";
     font-size: 11pt !important;
     line-height: 170% !important;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     background: var(--markdown-cell-background-color);
     background-color: var(--markdown-cell-background-color);
     max-width: 80%;
@@ -2408,8 +2424,8 @@ hr {
 }
 
 #complete>select>option:hover {
-    background: rgba(30, 67, 77, .3);
-    background-color: rgba(30, 67, 77, .3);
+    background: var(--ancilliary-color-7);
+    background-color: var(--ancilliary-color-7);
 }
 
 div#_vivaldi-spatnav-focus-indicator._vivaldi-spatnav-focus-indicator {
@@ -2435,18 +2451,19 @@ div#_vivaldi-spatnav-focus-indicator._vivaldi-spatnav-focus-indicator {
 }
 
 .rendered_html td {
-    font-family: sans-serif !important;
+    font-family: "IBM Plex Sans" !important;
+    color: var(--table-font-color);
     font-size: 9.3pt;
 }
 
 .rendered_html table {
-    font-family: sans-serif !important;
+    font-family: "IBM Plex Sans" !important;
     margin-left: 8px;
     margin-right: auto;
     border: none;
     border-collapse: collapse;
     border-spacing: 0;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     table-layout: fixed;
 }
 
@@ -2454,7 +2471,7 @@ div#_vivaldi-spatnav-focus-indicator._vivaldi-spatnav-focus-indicator {
     font-family: 'IBM Plex Sans' !important;
     font-size: 10.3pt !important;
     background: var(--primary-hover-color);
-    color: #93a1a1;
+    color: var(--table-font-color);
     border-bottom: 1px solid var(--primary-hover-color);
     vertical-align: bottom;
 }
@@ -2468,11 +2485,26 @@ div#_vivaldi-spatnav-focus-indicator._vivaldi-spatnav-focus-indicator {
 }
 
 .rendered_html tbody tr:hover:nth-child(odd) {
-    background: var(--ancilliary-color-1);
+    background: var(--table-odd-hover-color);
 }
 
 .rendered_html tbody tr:hover {
-    background: #001b22;
+    background: var(--table-even-hover-color);
+}
+
+.table>thead>tr>th {
+    border-bottom: var(--table-head-border-thickness) solid var(--table-border-color) !important;
+    font-style: bold;
+    text-align: center;
+}
+
+.table>thead>tr>th,
+.table>tbody>tr>th,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>tbody>tr>td,
+.table>tfoot>tr>td {
+    border-top: var(--table-cell-border) !important;
 }
 
 .rendered_html *+table {
@@ -2482,7 +2514,7 @@ div#_vivaldi-spatnav-focus-indicator._vivaldi-spatnav-focus-indicator {
 div.widget-area {
     background-color: var(--background-color-main);
     background: var(--background-color-main);
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 div.widget-area a {
@@ -2490,7 +2522,7 @@ div.widget-area a {
     font-size: 12.0pt;
     font-weight: normal;
     font-style: normal;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     text-shadow: none !important;
 }
 
@@ -2501,8 +2533,8 @@ div.widget-area a:focus {
     font-weight: normal;
     font-style: normal;
     color: #839496;
-    background: rgba(30, 67, 77, .3);
-    background-color: rgba(30, 67, 77, .3);
+    background: var(--ancilliary-color-7);
+    background-color: var(--ancilliary-color-7);
     border-color: transparent;
     background-image: none;
     text-shadow: none !important;
@@ -2533,7 +2565,7 @@ div.widget-label {
     max-width: 240px !important;
     min-width: 100px !important;
     vertical-align: text-top !important;
-    color: #586e75 !important;
+    color: var(--ancilliary-color-3) !important;
     font-size: 14px !important;
 }
 
@@ -2581,7 +2613,7 @@ div.widget-label {
 .rendered_html :link {
     font-family: 'IBM Plex Sans';
     font-size: 100%;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     text-decoration: underline;
 }
 
@@ -2654,8 +2686,8 @@ div.nbext-selector>nav>.nav>li>a:hover {
 }
 
 div.nbext-selector>nav>.nav>li:hover {
-    background-color: rgba(30, 67, 77, .3) !important;
-    background: rgba(30, 67, 77, .3) !important;
+    background-color: var(--ancilliary-color-7) !important;
+    background: var(--ancilliary-color-7) !important;
 }
 
 div.nbext-selector>nav>.nav>li.active:hover {
@@ -2668,8 +2700,8 @@ div.nbext-selector>nav>.nav>li.active:hover {
 .nav-pills>li.active>a:hover,
 .nav-pills>li.active>a:focus {
     color: var(--text-cell-passive-color);
-    background-color: rgba(30, 67, 77, .3) !important;
-    background: rgba(30, 67, 77, .3) !important;
+    background-color: var(--ancilliary-color-7) !important;
+    background: var(--ancilliary-color-7) !important;
     -webkit-backface-visibility: hidden;
     -webkit-font-smoothing: subpixel-antialiased !important;
 }
@@ -2679,7 +2711,7 @@ div.nbext-readme>.nbext-readme-contents>.rendered_html {
     font-size: 11.5pt;
     line-height: 145%;
     padding: 1em 1em;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     background-color: var(--cell-background-color-main);
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -2717,9 +2749,9 @@ div.nbext-readme>.nbext-readme-contents:not(:empty) {
 .nbext-filter-menu.dropdown-menu>li>a:focus,
 .nbext-filter-menu.dropdown-menu>li>a.ui-state-focus {
     color: #839496 !important;
-    background-color: rgba(30, 67, 77, .3) !important;
-    background: rgba(30, 67, 77, .3) !important;
-    border-color: rgba(30, 67, 77, .3) !important;
+    background-color: var(--ancilliary-color-7) !important;
+    background: var(--ancilliary-color-7) !important;
+    border-color: var(--ancilliary-color-7) !important;
 }
 
 .nbext-filter-input-wrap>.nbext-filter-input-subwrap,
@@ -2734,7 +2766,7 @@ div.nbext-readme>.nbext-readme-contents:not(:empty) {
 
 span.rendered_html code {
     background-color: transparent;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 #nbextensions-configurator-container>div.row.container-fluid.nbext-selector {
@@ -2756,7 +2788,7 @@ span.rendered_html code {
 .alert-warning {
     background-color: var(--cell-background-color-main);
     border-color: var(--cell-background-color-secondary);
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 .notification_widget.danger {
@@ -2777,13 +2809,13 @@ button#refresh_running_list {
 mark,
 .mark {
     background-color: var(--cell-background-color-main);
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     padding: .15em;
 }
 
 a.text-warning,
 a.text-warning:hover {
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 a.text-warning.bg-warning {
@@ -2828,14 +2860,14 @@ span.bg-danger.text-danger {
 
 .kse-input-group-pretty>kbd {
     font-family: "IBM Plex Mono";
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     font-weight: normal;
     background: transparent;
 }
 
 .kse-input-group-pretty>kbd {
     font-family: "IBM Plex Mono";
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     font-weight: normal;
     background: transparent;
 }
@@ -2885,7 +2917,7 @@ label#Keyword-Filter {
     background: var(--cell-background-color-main);
     background-color: var(--cell-background-color-main);
     border: 2px solid var(--cell-background-color-secondary);
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 div.collapsible_headings_toggle {
@@ -2893,7 +2925,7 @@ div.collapsible_headings_toggle {
 }
 
 div.collapsible_headings_toggle:hover {
-    color: #586e75 !important;
+    color: var(--ancilliary-color-3) !important;
 }
 
 .collapsible_headings_toggle .h1,
@@ -2957,18 +2989,18 @@ div.collapsible_headings_toggle .fa-caret-right:before {
 }
 
 #toc-wrapper.ui-draggable.ui-resizable.sidebar-wrapper {
-    border-color: rgba(30, 67, 77, .3) !important;
+    border-color: var(--ancilliary-color-7) !important;
 }
 
 #toc a,
 #navigate_menu a,
 .toc {
-    color: #586e75 !important;
+    color: var(--ancilliary-color-3) !important;
     font-size: 11pt !important;
 }
 
 #toc li>span:hover {
-    background-color: rgba(30, 67, 77, .3) !important;
+    background-color: var(--ancilliary-color-7) !important;
 }
 
 #toc a:hover,
@@ -2979,15 +3011,15 @@ div.collapsible_headings_toggle .fa-caret-right:before {
 }
 
 #toc-wrapper .toc-item-num {
-    color: #586e75 !important;
+    color: var(--ancilliary-color-3) !important;
     font-size: 11pt !important;
 }
 
 input.raw_input {
     font-family: "IBM Plex Mono";
     font-size: 11pt !important;
-    color: #586e75;
-    background-color: #052730;
+    color: var(--ancilliary-color-3);
+    background-color: var(--ancilliary-color-6);
     border-color: #05232b;
     background: #05232b;
     width: auto;
@@ -3025,7 +3057,7 @@ video {
 
 .typeahead-field input {
     font-family: 'IBM Plex Sans';
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     border: none;
     font-size: 28pt;
     display: inline-block;
@@ -3067,7 +3099,7 @@ body>div.modal.cmd-palette.typeahead-field {
 .typeahead-container button:hover {
     color: #839496;
     background-color: var(--primary-hover-color);
-    border-color: #083e4b;
+    border-color: var(--ancilliary-color-4);
 }
 
 .typeahead-list>li.typeahead-group.active>a,
@@ -3079,7 +3111,7 @@ body>div.modal.cmd-palette.typeahead-field {
 
 .typeahead-dropdown>li>a,
 .typeahead-list>li>a {
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     text-decoration: none;
 }
 
@@ -3087,7 +3119,7 @@ body>div.modal.cmd-palette.typeahead-field {
 .typeahead-list {
     font-family: 'IBM Plex Sans';
     font-size: 13pt;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     background-color: #084150;
     border: none;
     background-clip: padding-box;
@@ -3110,13 +3142,13 @@ body>div.modal.cmd-palette.typeahead-field {
 .command-shortcut:before {
     content: "(command)";
     padding-right: 3px;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 .edit-shortcut:before {
     content: "(edit)";
     padding-right: 3px;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 ul.typeahead-list i {
@@ -3138,7 +3170,7 @@ ul.typeahead-list {
 div.input.typeahead-hint,
 input.typeahead-hint,
 body>div.modal.cmd-palette.in>div>div>div>form>div>div.typeahead-field>span.typeahead-query>input.typeahead-hint {
-    color: #586e75 !important;
+    color: var(--ancilliary-color-3) !important;
     background-color: transparent;
     padding: 3px 10px;
 }
@@ -3161,7 +3193,7 @@ body>div.modal.cmd-palette.in>div {
 
 .typeahead-container strong {
     font-weight: bolder;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 #find-and-replace #replace-preview .match,
@@ -3190,7 +3222,7 @@ body>div.modal.cmd-palette.in>div {
     font-family: 'FontAwesome' !important;
     content: '\f00c' !important;
     position: absolute !important;
-    color: #586e75 !important;
+    color: var(--ancilliary-color-3) !important;
     left: 0px !important;
     top: 13px !important;
     font-size: 12px !important;
@@ -3207,11 +3239,11 @@ span.shortcut_key {
 .jupyter-keybindings {
     padding: 1px;
     line-height: 24px;
-    border-bottom: 1px solid rgba(30, 67, 77, .3);
+    border-bottom: 1px solid var(--ancilliary-color-7);
 }
 
 .jupyter-keybindings i {
-    background: #052730;
+    background: var(--ancilliary-color-6);
     font-size: small;
     padding: 5px;
     margin-left: 7px;
@@ -3221,7 +3253,7 @@ div#short-key-bindings-intro.well,
 .well {
     background-color: var(--ancilliary-color-1);
     border: 1px solid var(--ancilliary-color-1);
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     border-radius: 0px;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -3234,9 +3266,9 @@ div#short-key-bindings-intro.well,
 
 #texteditor-backdrop #texteditor-container .CodeMirror-gutter,
 #texteditor-backdrop #texteditor-container .CodeMirror-gutters {
-    background: #062e39;
-    background-color: #062e39;
-    color: #657b83;
+    background: var(--ancilliary-color-2);
+    background-color: var(--ancilliary-color-2);
+    color: var(--ancilliary-color-5);
 }
 
 .edit_app #menubar .navbar {
@@ -3261,7 +3293,7 @@ div#short-key-bindings-intro.well,
     font-family: "IBM Plex Mono";
     font-size: 11pt;
     line-height: 170%;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     background: var(--cell-background-color-main);
     padding: 0.4em;
     border-radius: 0px;
@@ -3271,12 +3303,12 @@ div#short-key-bindings-intro.well,
 
 .terminal .xterm-viewport {
     background-color: var(--cell-background-color-main);
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     overflow-y: auto;
 }
 
 .terminal .xterm-color-0 {
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 .terminal .xterm-color-1 {
@@ -3328,12 +3360,12 @@ div#short-key-bindings-intro.well,
 }
 
 .terminal:not(.xterm-cursor-style-underline):not(.xterm-cursor-style-bar) .terminal-cursor {
-    background-color: #586e75;
+    background-color: var(--ancilliary-color-3);
     color: var(--cell-background-color-secondary);
 }
 
 .terminal:not(.focus) .terminal-cursor {
-    outline: 1px solid #586e75;
+    outline: 1px solid var(--ancilliary-color-3);
     outline-offset: -1px;
 }
 
@@ -3348,10 +3380,10 @@ div#short-key-bindings-intro.well,
 .cell-tag,
 .tags-input input,
 .tags-input button {
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     background-color: var(--background-color-main);
     background-image: none;
-    border: 1px solid #586e75;
+    border: 1px solid var(--ancilliary-color-3);
     border-radius: 0px;
     box-shadow: none;
     width: inherit;
@@ -3363,10 +3395,10 @@ div#short-key-bindings-intro.well,
 #notebook-container>div.cell.code_cell.rendered.selected>div.input>div.inner_cell>div.ctb_hideshow.ctb_show>div>div>button,
 #notebook-container>div.input>div.inner_cell>div.ctb_hideshow.ctb_show>div>div>button {
     font-size: 10pt;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     background-color: var(--background-color-main);
     background-image: none;
-    border: 1px solid #586e75;
+    border: 1px solid var(--ancilliary-color-3);
     border-radius: 0px;
     box-shadow: none;
     width: inherit;
@@ -3381,7 +3413,7 @@ div#pager #pager-contents {
 }
 
 div#pager pre {
-    color: #586e75 !important;
+    color: var(--ancilliary-color-3) !important;
     background: var(--cell-background-color-secondary) !important;
     background-color: var(--cell-background-color-secondary) !important;
     padding: 0.4em;
@@ -3390,9 +3422,9 @@ div#pager pre {
 div#pager .ui-resizable-handle {
     top: 0px;
     height: 8px;
-    background: #586e75 !important;
-    border-top: 1px solid #586e75;
-    border-bottom: 1px solid #586e75;
+    background: var(--ancilliary-color-3) !important;
+    border-top: 1px solid var(--ancilliary-color-3);
+    border-bottom: 1px solid var(--ancilliary-color-3);
 }
 
 div.CodeMirror,
@@ -3400,7 +3432,7 @@ div.CodeMirror pre {
     font-family: "IBM Plex Mono";
     font-size: 11pt;
     line-height: 170%;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 div.CodeMirror-lines {
@@ -3465,7 +3497,7 @@ div.output-stderr {
 }
 
 div.output-stderr pre {
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 div.js-error {
@@ -3493,7 +3525,7 @@ div.js-error {
     line-height: 170%;
     background: var(--cell-background-color-main);
     background-color: var(--cell-background-color-main);
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     overflow-x: visible;
     overflow-y: visible;
     max-width: 900px;
@@ -3516,7 +3548,7 @@ div.tooltiptext.bigtooltip {
     font-family: "IBM Plex Mono";
     font-size: 11pt;
     background: var(--cell-background-color-main);
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     border-radius: 0px;
     font-style: normal;
     font-weight: normal;
@@ -3527,27 +3559,27 @@ out_prompt_overlay prompt:hover {
 }
 
 .cm-s-ipython div.CodeMirror-selected {
-    background: #062e39;
+    background: var(--ancilliary-color-2);
 }
 
 .CodeMirror-gutters {
     border: none;
-    border-right: 1px solid #062e39 !important;
-    background-color: #062e39 !important;
-    background: #062e39 !important;
+    border-right: 1px solid var(--ancilliary-color-2) !important;
+    background-color: var(--ancilliary-color-2) !important;
+    background: var(--ancilliary-color-2) !important;
     border-radius: 0px;
     white-space: nowrap;
 }
 
 .cm-s-ipython .CodeMirror-gutters {
-    background: #062e39;
+    background: var(--ancilliary-color-2);
     border: none;
     border-radius: 0px;
     width: 36px;
 }
 
 .cm-s-ipython .CodeMirror-linenumber {
-    color: #657b83;
+    color: var(--ancilliary-color-5);
 }
 
 .CodeMirror-sizer {
@@ -3566,7 +3598,7 @@ div.CodeMirror-linenumber,
 }
 
 .CodeMirror-linenumber {
-    color: #657b83;
+    color: var(--ancilliary-color-5);
 }
 
 .cm-s-ipython .CodeMirror-cursor {
@@ -3594,7 +3626,7 @@ div.CodeMirror-linenumber,
 }
 
 .cm-s-ipython span.cm-attribute {
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 /* if, not, `def`, `class`, from, is, not, import */
@@ -3631,7 +3663,7 @@ div.CodeMirror-linenumber,
 }
 
 .cm-s-ipython span.cm-variable-3 {
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 /* function-names, class names */
@@ -3713,7 +3745,7 @@ div.cell.text_cell .cm-s-default span.cm-variable-2 {
 }
 
 div.cell.text_cell .cm-s-default span.cm-variable-3 {
-    color: #586e75 !important;
+    color: var(--ancilliary-color-3) !important;
 }
 
 .cm-s-default span.cm-comment {
@@ -3722,7 +3754,7 @@ div.cell.text_cell .cm-s-default span.cm-variable-3 {
 }
 
 .cm-s-default .cm-tag {
-    color: #586e75;
+    color: var(--ancilliary-color-3);
 }
 
 /* isinstance, list, tuple */
@@ -3768,11 +3800,11 @@ div.cell.text_cell .cm-s-default span.cm-variable-3 {
 }
 
 .cm-s-default div.CodeMirror-selected {
-    background: #062e39;
+    background: var(--ancilliary-color-2);
 }
 
 .cm-s-default .cm-selected {
-    background: #062e39;
+    background: var(--ancilliary-color-2);
 }
 
 .MathJax_Display,
@@ -3814,7 +3846,7 @@ body :focus .MathJax {
     overflow: auto;
     font-family: "IBM Plex Mono";
     font-size: 11pt;
-    color: #586e75;
+    color: var(--ancilliary-color-3);
     width: auto;
 }
 
