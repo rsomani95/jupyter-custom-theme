@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans);
 
 :root {
+    /* Code Formatting Colors */
     --keyword-color: #82cfff;
     --def-color: #edbc52;
     --builtin-color: var(--def-color);
@@ -12,6 +13,23 @@
     --string-color: #d78585;
     --variable-color: #82A6E9;
     --variable2-color: #a6accd;
+
+    /* Background Colors */
+    --background-color-main: #0F111B;
+    --background-color-secondary: #464b5d;
+    /* --cell-background-color-main: var(--cell-background-color-secondary); */
+    --cell-background-color-main: var(--background-color-main);
+    --cell-background-color-secondary: #073642;
+    --cell-border: medium solid #04313c;
+
+    /* Other */
+    /* --selected-cell-active-color: #edbc52; */
+    --selected-cell-active-color: red;
+    --selected-cell-passive-color: yellow;
+    --markdown-headings-color: cyan;
+    --horizontal-rule-color: var(--markdown-headings-color) --selected-cell-passive-color: #d78585;
+    --code-cursor-color: #008faf;
+    --code-cursor-thickness: 0.7em;
 }
 
 div#notebook {
@@ -28,15 +46,15 @@ div.body {
     font-family: 'IBM Plex Sans';
     font-size: 13pt;
     color: #586e75;
-    background-color: #002b36;
-    background: #002b36;
+    background-color: var(--background-color-main);
+    background: var(--background-color-main);
     -webkit-font-smoothing: antialiased !important;
 }
 
 body.notebook_app {
     padding: 0;
-    background-color: #002b36;
-    background: #002b36;
+    background-color: var(--background-color-main);
+    background: var(--background-color-main);
     padding-right: 0px !important;
     overflow-y: hidden;
 }
@@ -115,15 +133,15 @@ i.fa.fa-folder {
 }
 
 #running .panel-group .panel .panel-body .list_container .list_item {
-    background: #073642;
-    background-color: #073642;
+    background: var(--cell-background-color-main);
+    background-color: var(--cell-background-color-main);
     padding: 2px;
     border-bottom: 2px solid rgba(30, 67, 77, .5);
 }
 
 #running .panel-group .panel .panel-body .list_container .list_item:hover {
-    background: #073642;
-    background-color: #073642;
+    background: var(--cell-background-color-main);
+    background-color: var(--cell-background-color-main);
 }
 
 #running .panel-group .panel .panel-body {
@@ -243,7 +261,7 @@ span#login_widget>.button,
     color: #586e75;
     background: transparent;
     background-color: transparent;
-    border: 2px solid #073642;
+    border: 2px solid var(--cell-background-color-secondary);
     font-weight: normal;
     box-shadow: none;
     text-shadow: none;
@@ -291,8 +309,8 @@ body>#header #header-container {
 }
 
 body>#header {
-    background: #002b36;
-    background-color: #002b36;
+    background: var(--background-color-main);
+    background-color: var(--background-color-main);
     position: relative;
     z-index: 100;
 }
@@ -367,8 +385,8 @@ body>#header {
 #button-select-all.focus,
 #button-select-all:active.focus,
 #button-select-all.active.focus {
-    background-color: #073642 !important;
-    background: #073642 !important;
+    background-color: var(--cell-background-color-secondary) !important;
+    background: var(--cell-background-color-secondary) !important;
 }
 
 button#tree-selector-btn {
@@ -531,12 +549,12 @@ div#notebook {
 }
 
 .notebook_app {
-    background-color: #002b36;
+    background-color: var(--background-color-main);
 }
 
 #notebook-container {
     padding: 13px 2px;
-    background-color: #002b36;
+    background-color: var(--background-color-main);
     min-height: 0px;
     box-shadow: none;
     width: 90%;
@@ -570,7 +588,7 @@ div#header-container {
 .notebook_app #header,
 .edit_app #header {
     box-shadow: none !important;
-    background-color: #002b36;
+    background-color: var(--background-color-main);
     border-bottom: 2px solid rgba(30, 67, 77, .3);
 }
 
@@ -579,18 +597,18 @@ div#header-container {
     font-family: 'IBM Plex Sans';
     font-size: 13pt;
     box-shadow: none;
-    background-color: #002b36;
+    background-color: var(--background-color-main);
 }
 
 #header .header-bar,
 .edit_app #header .header-bar {
-    background: #002b36;
-    background-color: #002b36;
+    background: var(--background-color-main);
+    background-color: var(--background-color-main);
 }
 
 body>#header .header-bar {
     width: 100%;
-    background: #002b36;
+    background: var(--background-color-main);
 }
 
 span.checkpoint_status,
@@ -601,13 +619,13 @@ span.autosave_status {
 
 #menubar,
 div#menubar {
-    background-color: #002b36;
+    background-color: var(--background-color-main);
     padding-top: 0px !important;
 }
 
 #menubar .navbar,
 .navbar-default {
-    background-color: #002b36;
+    background-color: var(--background-color-main);
     margin-bottom: 0px;
     margin-top: 0px;
 }
@@ -628,7 +646,7 @@ p.navbar-text.indicator_area {
 .navbar-default {
     font-family: 'IBM Plex Sans';
     font-size: 13pt;
-    background-color: #002b36;
+    background-color: var(--background-color-main);
     border-color: rgba(30, 67, 77, .3);
     line-height: 1.5em;
     padding-bottom: 0px;
@@ -657,7 +675,7 @@ p.navbar-text.indicator_area {
 .navbar-default .navbar-nav>.open>a:hover,
 .navbar-default .navbar-nav>.open>a:focus {
     color: #b58900;
-    background-color: #002b36;
+    background-color: var(--background-color-main);
     border-color: #002b36;
     line-height: 1.5em;
 }
@@ -800,8 +818,8 @@ div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn {
 #modal_indicator {
     float: right !important;
     color: #4c8be2;
-    background: #002b36;
-    background-color: #002b36;
+    background: var(--background-color-main);
+    background-color: var(--background-color-main);
     margin-top: 8px !important;
     margin-left: 0px;
 }
@@ -809,8 +827,8 @@ div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn {
 #kernel_indicator {
     float: right !important;
     color: #586e75;
-    background: #002b36;
-    background-color: #002b36;
+    background: var(--background-color-main);
+    background-color: var(--background-color-main);
     border-left: 2px solid #586e75;
     padding-top: 0px;
     padding-bottom: 4px;
@@ -822,8 +840,8 @@ div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn {
 #kernel_indicator .kernel_indicator_name {
     font-size: 17px;
     color: #586e75;
-    background: #002b36;
-    background-color: #002b36;
+    background: var(--background-color-main);
+    background-color: var(--background-color-main);
     padding-left: 5px;
     padding-right: 5px;
     margin-top: 4px;
@@ -902,7 +920,7 @@ div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn,
 div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn:hover,
 div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn:focus {
     color: #586e75;
-    background-color: #002b36;
+    background-color: var(--background-color-main);
     border-color: #002b36;
 }
 
@@ -952,8 +970,8 @@ i.fa.fa-icon {
     padding: 0px;
     text-align: left;
     border: none;
-    background-color: #002b36;
-    background: #002b36;
+    background-color: var(--background-color-main);
+    background: var(--background-color-main);
     line-height: 1;
 }
 
@@ -964,7 +982,7 @@ i.fa.fa-icon {
     padding: 0px;
     text-align: left;
     border: none;
-    background-color: #002b36;
+    background-color: var(--background-color-main);
     box-shadow: none;
     line-height: 1;
 }
@@ -975,8 +993,8 @@ i.fa.fa-icon {
     display: block;
     padding: 10px 20px 9px 10px;
     color: #586e75;
-    background-color: #002b36;
-    background: #002b36;
+    background-color: var(--background-color-main);
+    background: var(--background-color-main);
 }
 
 .dropdown-menu>li>a:hover,
@@ -1044,9 +1062,9 @@ div.kse-dropdown>.dropdown-menu,
 .btn-default {
     font-family: 'IBM Plex Sans';
     color: #586e75;
-    background: #073642;
-    background-color: #073642;
-    border: 2px solid #073642;
+    background: var(--cell-background-color-main);
+    background-color: var(--cell-background-color-main);
+    border: 2px solid var(--cell-background-color-secondary);
     font-weight: normal;
     box-shadow: none;
     text-shadow: none;
@@ -1107,7 +1125,7 @@ div.kse-dropdown>.dropdown-menu,
 .btn-default:active.focus,
 .btn-default.active.focus {
     color: #b58900 !important;
-    background-color: #073642;
+    background-color: var(--cell-background-color-main);
     border-color: #856c21 !important;
     transition: 2000ms ease;
 }
@@ -1244,7 +1262,7 @@ div.dynamic-buttons>button,
     vertical-align: bottom;
     margin-left: -.5ex;
     display: inline-table;
-    border: solid 0px #073642;
+    border: solid 0px var(--cell-background-color-secondary);
     margin-bottom: -1ex;
 }
 
@@ -1462,7 +1480,7 @@ div.modal-footer>button:hover {
 }
 
 .modal-body {
-    background-color: #073642;
+    background-color: var(--cell-background-color-main);
     position: relative;
     padding: 15px;
 }
@@ -1470,12 +1488,12 @@ div.modal-footer>button:hover {
 .modal-footer {
     padding: 8px;
     text-align: right;
-    background-color: #073642;
+    background-color: var(--cell-background-color-main);
     border-top: none;
 }
 
 .alert-info {
-    background-color: #073642;
+    background-color: var(--cell-background-color-main);
     border-color: rgba(30, 67, 77, .5);
     color: #586e75;
 }
@@ -1497,7 +1515,7 @@ div.panel-default,
 .panel-default {
     font-family: 'IBM Plex Sans';
     font-size: 13pt;
-    background-color: #073642;
+    background-color: var(--cell-background-color-main);
     color: #586e75;
     margin-bottom: 14px;
     border: 0;
@@ -1544,7 +1562,7 @@ div.form-control,
 
 .form-group.list-group-item {
     color: #586e75;
-    background-color: #073642;
+    background-color: var(--cell-background-color-main);
     border-color: rgba(30, 67, 77, .5);
     margin-bottom: 0px;
 }
@@ -1577,9 +1595,9 @@ select.form-control.select-xs {
     font-size: 92%;
     margin-left: 10px;
     padding: 0px;
-    background: #073642 !important;
-    background-color: #073642 !important;
-    border: 2px solid #073642 !important;
+    background: var(--cell-background-color-secondary) !important;
+    background-color: var(--cell-background-color-secondary) !important;
+    border: 2px solid var(--cell-background-color-secondary) !important;
 }
 
 .form-control:focus {
@@ -1677,8 +1695,8 @@ a {
 }
 
 div.input_area {
-    background-color: #073642;
-    background: #073642;
+    background-color: var(--cell-background-color-main);
+    background: var(--cell-background-color-main);
     padding-right: 1.2em;
     border: 0px;
     border-radius: 0px;
@@ -1688,33 +1706,33 @@ div.input_area {
 
 div.cell {
     padding: 0px;
-    background: #073642;
-    background-color: #073642;
-    border: medium solid #002b36;
+    background: var(--cell-background-color-main);
+    background-color: var(--cell-background-color-main);
+    border: var(--cell-border);
     border-radius: 4px;
     top: 0;
 }
 
 div.cell.selected {
-    background: #073642;
-    background-color: #073642;
-    border: medium solid #002b36;
+    background: var(--cell-background-color-main);
+    background-color: var(--cell-background-color-main);
+    border: var(--cell-border);
     padding: 0px;
     border-radius: 5px;
 }
 
 .edit_mode div.cell.selected {
     padding: 0px;
-    background: #073642;
-    background-color: #073642;
-    border: medium solid #002b36;
+    background: var(--cell-background-color-main);
+    background-color: var(--cell-background-color-main);
+    border: var(--cell-border);
     border-radius: 5px;
 }
 
 div.cell.edit_mode {
     padding: 0px;
-    background: #073642;
-    background-color: #073642;
+    background: var(--cell-background-color-main);
+    background-color: var(--cell-background-color-main);
 }
 
 div.CodeMirror-sizer {
@@ -1731,7 +1749,7 @@ div.cell.selected:before,
 .edit_mode div.cell.selected:before,
 div.cell.selected:before,
 div.cell.selected.jupyter-soft-selected:before {
-    background: #073642 !important;
+    background: var(--cell-background-color-secondary) !important;
     border: none;
     border-radius: 3px;
     position: absolute;
@@ -1746,13 +1764,13 @@ div.cell.text_cell.selected::before,
 .edit_mode div.cell.text_cell.selected:before,
 div.cell.text_cell.selected:before,
 div.cell.text_cell.selected.jupyter-soft-selected:before {
-    background: #073642 !important;
-    background-color: #073642 !important;
+    background: var(--cell-background-color-secondary) !important;
+    background-color: var(--cell-background-color-secondary) !important;
     border-color: #b58900 !important;
 }
 
 div.cell.code_cell .input {
-    border-left: 5px solid #073642 !important;
+    border-left: 5px solid var(--cell-background-color-secondary) !important;
     border-radius: 3px;
     border-bottom-left-radius: 3px;
     border-top-left-radius: 3px;
@@ -1786,7 +1804,7 @@ div.cell.selected.jupyter-soft-selected {
 }
 
 div.cell.selected.jupyter-soft-selected .input {
-    border-left: 5px solid #073642 !important;
+    border-left: 5px solid var(--cell-background-color-secondary) !important;
 }
 
 div.cell.selected.jupyter-soft-selected {
@@ -1804,7 +1822,7 @@ div.cell.code_cell.selected .input {
 div.cell.selected.jupyter-soft-selected .prompt,
 div.cell.text_cell.selected.jupyter-soft-selected .prompt {
     top: 0;
-    border-left: #073642 !important;
+    border-left: var(--cell-background-color-secondary) !important;
     border-radius: 2px;
 }
 
@@ -1846,7 +1864,7 @@ div.prompt,
 
 div.prompt.input_prompt {
     font-size: 9pt !important;
-    background-color: #073642;
+    background-color: var(--cell-background-color-main);
     border-top: 0px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -1921,7 +1939,7 @@ div.cell.code_cell.rendered.unselected.jupyter-soft-selected .run_this_cell:hove
 }
 
 div.output_wrapper {
-    background-color: #002b36;
+    background-color: var(--background-color-main);
     border: 0px;
     left: 0px;
     margin-bottom: 0em;
@@ -1935,7 +1953,7 @@ div.output_subarea.output_text {
     font-family: "IBM Plex Mono";
     font-size: 8.5pt !important;
     line-height: 150% !important;
-    background-color: #002b36;
+    background-color: var(--background-color-main);
     color: #586e75;
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
@@ -1959,8 +1977,8 @@ div.output_html {
     font-family: "IBM Plex Mono";
     font-size: 8.5pt;
     color: #586e75;
-    background-color: #002b36;
-    background: #002b36;
+    background-color: var(--background-color-main);
+    background: var(--background-color-main);
 }
 
 div.output_subarea {
@@ -1987,7 +2005,7 @@ div.btn.btn-default.output_collapsed:hover {
 div.prompt.output_prompt {
     font-family: "IBM Plex Mono";
     font-weight: bold !important;
-    background-color: #002b36;
+    background-color: var(--background-color-main);
     color: transparent;
     border-bottom-left-radius: 4px;
     border-top-right-radius: 0px;
@@ -2001,7 +2019,7 @@ div.prompt.output_prompt {
 div.out_prompt_overlay.prompt {
     font-family: "IBM Plex Mono";
     font-weight: bold !important;
-    background-color: #002b36;
+    background-color: var(--background-color-main);
     border-bottom-left-radius: 2px;
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
@@ -2040,7 +2058,7 @@ div.cell.selected .out_prompt_overlay.prompt {
 
 .edit_mode div.cell.selected .output_prompt,
 .edit_mode div.cell.selected .out_prompt_overlay.prompt {
-    border-left: 5px solid #a38012;
+    border-left: 5px solid #b58900;
     border-right: 2px solid #002b36;
     border-radius: 0px !important;
 }
@@ -2052,8 +2070,8 @@ div.text_cell_render {
     font-size: 13pt;
     line-height: 130% !important;
     color: #586e75;
-    background: #073642;
-    background-color: #073642;
+    background: var(--cell-background-color-main);
+    background-color: var(--cell-background-color-main);
     border-radius: 0px;
 }
 
@@ -2072,8 +2090,8 @@ div.cell.text_cell .CodeMirror-lines {
 
 div.cell.text_cell.unrendered div.input_area,
 div.cell.text_cell.rendered div.input_area {
-    background-color: #073642;
-    background: #073642;
+    background-color: var(--cell-background-color-main);
+    background: var(--cell-background-color-main);
     border: 0px;
     border-radius: 2px;
 }
@@ -2086,32 +2104,32 @@ div.cell.text_cell .CodeMirror pre {
 div.cell.text_cell.rendered.selected {
     font-family: 'IBM Plex Sans';
     line-height: 170% !important;
-    background: #073642;
-    background-color: #073642;
+    background: var(--cell-background-color-main);
+    background-color: var(--cell-background-color-main);
     border-radius: 0px;
 }
 
 div.cell.text_cell.unrendered.selected {
     font-family: 'IBM Plex Sans';
     line-height: 170% !important;
-    background: #073642;
-    background-color: #073642;
+    background: var(--cell-background-color-main);
+    background-color: var(--cell-background-color-main);
     border-radius: 0px;
 }
 
 div.cell.text_cell.selected {
     font-family: 'IBM Plex Sans';
     line-height: 170% !important;
-    background: #073642;
-    background-color: #073642;
+    background: var(--cell-background-color-main);
+    background-color: var(--cell-background-color-main);
     border-radius: 0px;
 }
 
 .edit_mode div.cell.text_cell.selected {
     font-family: 'IBM Plex Sans';
     line-height: 170% !important;
-    background: #073642;
-    background-color: #073642;
+    background: var(--cell-background-color-main);
+    background-color: var(--cell-background-color-main);
     border-radius: 0px;
 }
 
@@ -2120,8 +2138,8 @@ div.text_cell.unrendered.selected,
 div.edit_mode div.text_cell.unrendered {
     font-family: 'IBM Plex Sans';
     line-height: 170% !important;
-    background: #073642;
-    background-color: #073642;
+    background: var(--cell-background-color-main);
+    background-color: var(--cell-background-color-main);
     border-radius: 0px;
 }
 
@@ -2139,9 +2157,9 @@ div.cell.text_cell.rendered .prompt {
     text-align: right !important;
     min-width: 14.5ex !important;
     width: 14.5ex !important;
-    background-color: #073642;
+    background-color: var(--cell-background-color-main);
     border-right: 2px solid rgba(30, 67, 77, .5);
-    border-left: 4px solid #073642;
+    border-left: 4px solid var(--cell-background-color-secondary);
 }
 
 div.cell.text_cell.unrendered .prompt {
@@ -2153,8 +2171,8 @@ div.cell.text_cell.unrendered .prompt {
     min-width: 14.5ex !important;
     width: 14.5ex !important;
     border-right: 2px solid rgba(30, 67, 77, .5);
-    border-left: 4px solid #073642;
-    background-color: #073642;
+    border-left: 4px solid var(--cell-background-color-secondary);
+    background-color: var(--cell-background-color-main);
 }
 
 div.cell.text_cell.rendered .prompt {
@@ -2170,7 +2188,7 @@ div.cell.text_cell.rendered.selected .prompt {
 div.text_cell.unrendered.selected .prompt,
 div.text_cell.rendered.selected .prompt {
     top: 0;
-    background: #073642;
+    background: var(--cell-background-color-main);
     border-left: 4px solid #a38012;
     border-right: 2px solid rgba(30, 67, 77, .5);
 }
@@ -2261,8 +2279,8 @@ div.text_cell_render code {
     font-size: 11pt !important;
     line-height: 170% !important;
     color: #586e75;
-    background: #002b36;
-    background-color: #002b36;
+    background: var(--background-color-main);
+    background-color: var(--background-color-main);
     max-width: 80%;
     border-radius: 0px;
     border-left: none;
@@ -2302,7 +2320,7 @@ div.rendered_html h5 {
 
 .rendered_html h1,
 .text_cell_render h1 {
-    color: #b58900 !important;
+    color: var(--markdown-headings-color) !important;
     font-size: 200%;
     text-align: left;
     font-style: normal;
@@ -2311,7 +2329,7 @@ div.rendered_html h5 {
 
 .rendered_html h2,
 .text_cell_render h2 {
-    color: #b58900 !important;
+    color: var(--markdown-headings-color) !important;
     font-size: 170%;
     font-style: normal;
     font-weight: normal;
@@ -2319,7 +2337,7 @@ div.rendered_html h5 {
 
 .rendered_html h3,
 .text_cell_render h3 {
-    color: #b58900 !important;
+    color: var(--markdown-headings-color) !important;
     font-size: 140%;
     font-style: normal;
     font-weight: normal;
@@ -2327,7 +2345,7 @@ div.rendered_html h5 {
 
 .rendered_html h4,
 .text_cell_render h4 {
-    color: #b58900 !important;
+    color: var(--markdown-headings-color) !important;
     font-size: 110%;
     font-style: normal;
     font-weight: normal;
@@ -2335,7 +2353,7 @@ div.rendered_html h5 {
 
 .rendered_html h5,
 .text_cell_render h5 {
-    color: #b58900 !important;
+    color: var(--markdown-headings-color) !important;
     font-size: 100%;
     font-style: normal;
     font-weight: normal;
@@ -2345,12 +2363,12 @@ hr {
     margin-top: 8px;
     margin-bottom: 10px;
     border: 0;
-    border-top: 1px solid #b58900;
+    border-top: 1px solid var(--horizontal-rule-color);
 }
 
 .rendered_html hr {
-    color: #b58900;
-    background-color: #b58900;
+    color: var(--horizontal-rule-color);
+    background-color: var(--horizontal-rule-color);
     margin-right: 2em;
 }
 
@@ -2407,7 +2425,7 @@ div#_vivaldi-spatnav-focus-indicator._vivaldi-spatnav-focus-indicator {
 }
 
 .rendered_html tbody tr:nth-child(odd) {
-    background: #002b36;
+    background: var(--background-color-main);
 }
 
 .rendered_html tbody tr {
@@ -2427,8 +2445,8 @@ div#_vivaldi-spatnav-focus-indicator._vivaldi-spatnav-focus-indicator {
 }
 
 div.widget-area {
-    background-color: #002b36;
-    background: #002b36;
+    background-color: var(--background-color-main);
+    background: var(--background-color-main);
     color: #586e75;
 }
 
@@ -2627,7 +2645,7 @@ div.nbext-readme>.nbext-readme-contents>.rendered_html {
     line-height: 145%;
     padding: 1em 1em;
     color: #586e75;
-    background-color: #073642;
+    background-color: var(--cell-background-color-main);
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -2701,8 +2719,8 @@ span.rendered_html code {
 }
 
 .alert-warning {
-    background-color: #073642;
-    border-color: #073642;
+    background-color: var(--cell-background-color-main);
+    border-color: var(--cell-background-color-secondary);
     color: #586e75;
 }
 
@@ -2723,7 +2741,7 @@ button#refresh_running_list {
 
 mark,
 .mark {
-    background-color: #073642;
+    background-color: var(--cell-background-color-main);
     color: #586e75;
     padding: .15em;
 }
@@ -2734,7 +2752,7 @@ a.text-warning:hover {
 }
 
 a.text-warning.bg-warning {
-    background-color: #002b36;
+    background-color: var(--background-color-main);
 }
 
 span.bg-success.text-success {
@@ -2743,7 +2761,7 @@ span.bg-success.text-success {
 }
 
 span.bg-danger.text-danger {
-    background-color: #002b36;
+    background-color: var(--background-color-main);
     color: #dc322f;
 }
 
@@ -2829,9 +2847,9 @@ label#Keyword-Filter {
 }
 
 .ui-widget-content {
-    background: #073642;
-    background-color: #073642;
-    border: 2px solid #073642;
+    background: var(--cell-background-color-main);
+    background-color: var(--cell-background-color-main);
+    border: 2px solid var(--cell-background-color-secondary);
     color: #586e75;
 }
 
@@ -2988,7 +3006,7 @@ video {
 body>div.modal.cmd-palette.typeahead-field {
     display: table;
     border-collapse: separate;
-    background-color: #073642;
+    background-color: var(--cell-background-color-main);
 }
 
 .typeahead-container button {
@@ -3050,8 +3068,8 @@ body>div.modal.cmd-palette.typeahead-field {
 .typeahead-list>li>a:focus,
 .typeahead-list>li>a:hover {
     color: #839496;
-    background-color: #073642;
-    border-color: #073642;
+    background-color: var(--cell-background-color-main);
+    border-color: var(--cell-background-color-secondary);
 }
 
 .command-shortcut:before {
@@ -3175,8 +3193,8 @@ div#short-key-bindings-intro.well,
 }
 
 #texteditor-backdrop {
-    background: #002b36;
-    background-color: #002b36;
+    background: var(--background-color-main);
+    background-color: var(--background-color-main);
 }
 
 #texteditor-backdrop #texteditor-container .CodeMirror-gutter,
@@ -3192,16 +3210,16 @@ div#short-key-bindings-intro.well,
 
 #texteditor-backdrop #texteditor-container {
     padding: 0px;
-    background-color: #073642;
+    background-color: var(--cell-background-color-main);
     box-shadow: none;
 }
 
 .terminal-app {
-    background: #002b36;
+    background: var(--background-color-main);
 }
 
 .terminal-app>#header {
-    background: #002b36;
+    background: var(--background-color-main);
 }
 
 .terminal-app .terminal {
@@ -3209,7 +3227,7 @@ div#short-key-bindings-intro.well,
     font-size: 11pt;
     line-height: 170%;
     color: #586e75;
-    background: #073642;
+    background: var(--cell-background-color-main);
     padding: 0.4em;
     border-radius: 2px;
     -webkit-box-shadow: none;
@@ -3217,7 +3235,7 @@ div#short-key-bindings-intro.well,
 }
 
 .terminal .xterm-viewport {
-    background-color: #073642;
+    background-color: var(--cell-background-color-main);
     color: #586e75;
     overflow-y: auto;
 }
@@ -3271,12 +3289,12 @@ div#short-key-bindings-intro.well,
 }
 
 .terminal .xterm-bg-color-15 {
-    background-color: #073642;
+    background-color: var(--cell-background-color-main);
 }
 
 .terminal:not(.xterm-cursor-style-underline):not(.xterm-cursor-style-bar) .terminal-cursor {
     background-color: #586e75;
-    color: #073642;
+    color: var(--cell-background-color-secondary);
 }
 
 .terminal:not(.focus) .terminal-cursor {
@@ -3296,7 +3314,7 @@ div#short-key-bindings-intro.well,
 .tags-input input,
 .tags-input button {
     color: #586e75;
-    background-color: #002b36;
+    background-color: var(--background-color-main);
     background-image: none;
     border: 1px solid #586e75;
     border-radius: 1px;
@@ -3311,7 +3329,7 @@ div#short-key-bindings-intro.well,
 #notebook-container>div.input>div.inner_cell>div.ctb_hideshow.ctb_show>div>div>button {
     font-size: 10pt;
     color: #586e75;
-    background-color: #002b36;
+    background-color: var(--background-color-main);
     background-image: none;
     border: 1px solid #586e75;
     border-radius: 1px;
@@ -3329,8 +3347,8 @@ div#pager #pager-contents {
 
 div#pager pre {
     color: #586e75 !important;
-    background: #073642 !important;
-    background-color: #073642 !important;
+    background: var(--cell-background-color-secondary) !important;
+    background-color: var(--cell-background-color-secondary) !important;
     padding: 0.4em;
 }
 
@@ -3424,8 +3442,8 @@ div.js-error {
     font-size: 11pt;
     line-height: 170%;
     border: 2px solid #03181d;
-    background: #073642;
-    background-color: #073642;
+    background: var(--cell-background-color-main);
+    background-color: var(--cell-background-color-main);
     border-radius: 2px;
     overflow-x: visible;
     overflow-y: visible;
@@ -3438,8 +3456,8 @@ div.js-error {
     font-family: "IBM Plex Mono";
     font-size: 11pt;
     line-height: 170%;
-    background: #073642;
-    background-color: #073642;
+    background: var(--cell-background-color-main);
+    background-color: var(--cell-background-color-main);
     color: #586e75;
     overflow-x: visible;
     overflow-y: visible;
@@ -3462,7 +3480,7 @@ div.tooltiptext.bigtooltip {
 .cm-s-ipython.CodeMirror {
     font-family: "IBM Plex Mono";
     font-size: 11pt;
-    background: #073642;
+    background: var(--cell-background-color-main);
     color: #586e75;
     border-radius: 2px;
     font-style: normal;
@@ -3513,7 +3531,7 @@ div.CodeMirror-linenumber,
 }
 
 .cm-s-ipython .CodeMirror-cursor {
-    border-left: 0.65em solid red !important;
+    border-left: var(--code-cursor-thickness) solid var(--code-cursor-color) !important;
     opacity: 35%;
 }
 
@@ -3583,7 +3601,7 @@ div.CodeMirror-linenumber,
 }
 
 .cm-s-ipython span.cm-error {
-    background: #073642;
+    background: var(--cell-background-color-main);
 }
 
 .cm-s-ipython span.cm-tag {
@@ -3609,7 +3627,7 @@ div.CodeMirror-linenumber,
 div.CodeMirror span.CodeMirror-matchingbracket {
     color: #ffffff;
     font-weight: bold;
-    background-color: #002b36;
+    background-color: var(--background-color-main);
 }
 
 div.CodeMirror span.CodeMirror-nonmatchingbracket {
@@ -3645,7 +3663,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
 div.cell.text_cell .cm-s-default .cm-header {
     font-family: 'IBM Plex Sans';
     font-weight: normal;
-    color: #b58900 !important;
+    color: var(--markdown-headings-color) !important;
     margin-top: 0.3em !important;
     margin-bottom: 0.3em !important;
 }
@@ -3745,8 +3763,8 @@ body :focus .MathJax {
 }
 
 .completions select {
-    background: #073642;
-    background-color: #073642;
+    background: var(--cell-background-color-main);
+    background-color: var(--cell-background-color-main);
     outline: none;
     border: none;
     padding: 0px;
