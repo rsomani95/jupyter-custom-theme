@@ -1,5 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono);
+@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans);
+
 div#notebook {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 13pt;
     line-height: 170%;
     color: #586e75;
@@ -9,7 +12,7 @@ div#notebook {
 
 body,
 div.body {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 13pt;
     color: #586e75;
     background-color: #002b36;
@@ -26,7 +29,7 @@ body.notebook_app {
 }
 
 a {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     color: #586e75;
     -webkit-font-smoothing: antialiased !important;
 }
@@ -216,14 +219,14 @@ span#sort-name.btn.btn-xs.btn-default.sort-action:hover .fa {
 }
 
 div#notebook_toolbar div.dynamic-instructions {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 17px;
     color: #586e75;
 }
 
 span#login_widget>.button,
 #logout {
-    font-family: "Proxima Nova", sans-serif;
+    font-family: 'IBM Plex Sans';
     color: #586e75;
     background: transparent;
     background-color: transparent;
@@ -434,7 +437,7 @@ div.list_item:hover {
 }
 
 ul#tabs a {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 13.5pt;
     font-weight: normal;
     font-style: normal;
@@ -442,7 +445,7 @@ ul#tabs a {
 }
 
 .nav-tabs {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 13.5pt;
     font-weight: normal;
     font-style: normal;
@@ -509,7 +512,7 @@ ul#tabs a {
 }
 
 div#notebook {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 13pt;
     padding-top: 4px;
 }
@@ -523,7 +526,7 @@ div#notebook {
     background-color: #002b36;
     min-height: 0px;
     box-shadow: none;
-    width: 980px;
+    width: 90%;
     margin-right: auto;
     margin-left: auto;
 }
@@ -560,7 +563,7 @@ div#header-container {
 
 #header,
 .edit_app #header {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 13pt;
     box-shadow: none;
     background-color: #002b36;
@@ -610,7 +613,7 @@ p.navbar-text.indicator_area {
 }
 
 .navbar-default {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 13pt;
     background-color: #002b36;
     border-color: rgba(30, 67, 77, .3);
@@ -619,7 +622,7 @@ p.navbar-text.indicator_area {
 }
 
 .navbar-default .navbar-nav>li>a {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 13pt;
     color: #586e75;
     display: block;
@@ -750,13 +753,13 @@ div.notification_widget.info,
 .item_buttons .running-indicator {
     padding-top: 4px;
     color: #859900;
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
 }
 
 #notification_trusted {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     border: none;
     background: transparent;
     background-color: transparent;
@@ -930,7 +933,7 @@ i.fa.fa-icon {
 }
 
 .dropdown-menu {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 13pt;
     box-shadow: none;
     padding: 0px;
@@ -942,7 +945,7 @@ i.fa.fa-icon {
 }
 
 .dropdown-menu:hover {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 13pt;
     box-shadow: none;
     padding: 0px;
@@ -954,7 +957,7 @@ i.fa.fa-icon {
 }
 
 .dropdown-menu>li>a {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 12.0pt;
     display: block;
     padding: 10px 20px 9px 10px;
@@ -992,7 +995,7 @@ i.fa.fa-icon {
 .dropdown-menu>.disabled>a,
 .dropdown-menu>.disabled>a:hover,
 .dropdown-menu>.disabled>a:focus {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 12.0pt;
     font-weight: normal;
     color: #586e75;
@@ -1026,7 +1029,7 @@ div.kse-dropdown>.dropdown-menu,
 
 .btn,
 .btn-default {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     color: #586e75;
     background: #073642;
     background-color: #073642;
@@ -1263,7 +1266,7 @@ div.dynamic-buttons>button,
 span#last-modified.btn.btn-xs.btn-default.sort-action,
 span#sort-name.btn.btn-xs.btn-default.sort-action,
 span#file-size.btn.btn-xs.btn-default.sort-action {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 16px;
     background-color: transparent;
     background: transparent;
@@ -1280,7 +1283,7 @@ span#last-modified.btn.btn-xs.btn-default.sort-action {
 
 button.close {
     border: 0px none;
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 20pt;
     font-weight: normal;
 }
@@ -1416,7 +1419,7 @@ div.modal-footer>button:hover {
 }
 
 .modal-content {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 12.0pt;
     position: relative;
     background: #002731;
@@ -1428,7 +1431,7 @@ div.modal-footer>button:hover {
 }
 
 .modal-header {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 13pt;
     color: #586e75;
     background: #002731;
@@ -1439,7 +1442,7 @@ div.modal-footer>button:hover {
 }
 
 .modal-content h4 {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 16pt;
     color: #586e75;
     padding: 5px;
@@ -1479,7 +1482,7 @@ div.panel,
 div.panel-default,
 .panel,
 .panel-default {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 13pt;
     background-color: #073642;
     color: #586e75;
@@ -1511,7 +1514,7 @@ div.container-fluid {
 
 div.form-control,
 .form-control {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: initial;
     color: #586e75;
     background-color: #084150;
@@ -1814,7 +1817,7 @@ div.cell.selected.jupyter-soft-selected .input {
 
 div.prompt,
 .prompt {
-    font-family: monospace, monospace;
+    font-family: "IBM Plex Mono";
     font-size: 9pt !important;
     font-weight: normal;
     color: #586e75;
@@ -1916,7 +1919,7 @@ div.output_wrapper {
 
 div.output_subarea.output_text.output_stream.output_stdout,
 div.output_subarea.output_text {
-    font-family: monospace, monospace;
+    font-family: "IBM Plex Mono";
     font-size: 8.5pt !important;
     line-height: 150% !important;
     background-color: #002b36;
@@ -1927,7 +1930,7 @@ div.output_subarea.output_text {
 }
 
 div.output_area pre {
-    font-family: monospace, monospace;
+    font-family: "IBM Plex Mono";
     font-size: 8.5pt !important;
     line-height: 151% !important;
     color: #586e75;
@@ -1940,7 +1943,7 @@ div.output_area {
 }
 
 div.output_html {
-    font-family: monospace, monospace;
+    font-family: "IBM Plex Mono";
     font-size: 8.5pt;
     color: #586e75;
     background-color: #002b36;
@@ -1969,7 +1972,7 @@ div.btn.btn-default.output_collapsed:hover {
 }
 
 div.prompt.output_prompt {
-    font-family: monospace, monospace;
+    font-family: "IBM Plex Mono";
     font-weight: bold !important;
     background-color: #002b36;
     color: transparent;
@@ -1983,7 +1986,7 @@ div.prompt.output_prompt {
 }
 
 div.out_prompt_overlay.prompt {
-    font-family: monospace, monospace;
+    font-family: "IBM Plex Mono";
     font-weight: bold !important;
     background-color: #002b36;
     border-bottom-left-radius: 2px;
@@ -2032,7 +2035,7 @@ div.cell.selected .out_prompt_overlay.prompt {
 div.text_cell,
 div.text_cell_render pre,
 div.text_cell_render {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 13pt;
     line-height: 130% !important;
     color: #586e75;
@@ -2068,7 +2071,7 @@ div.cell.text_cell .CodeMirror pre {
 }
 
 div.cell.text_cell.rendered.selected {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     line-height: 170% !important;
     background: #073642;
     background-color: #073642;
@@ -2076,7 +2079,7 @@ div.cell.text_cell.rendered.selected {
 }
 
 div.cell.text_cell.unrendered.selected {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     line-height: 170% !important;
     background: #073642;
     background-color: #073642;
@@ -2084,7 +2087,7 @@ div.cell.text_cell.unrendered.selected {
 }
 
 div.cell.text_cell.selected {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     line-height: 170% !important;
     background: #073642;
     background-color: #073642;
@@ -2092,7 +2095,7 @@ div.cell.text_cell.selected {
 }
 
 .edit_mode div.cell.text_cell.selected {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     line-height: 170% !important;
     background: #073642;
     background-color: #073642;
@@ -2102,7 +2105,7 @@ div.cell.text_cell.selected {
 div.text_cell.unrendered,
 div.text_cell.unrendered.selected,
 div.edit_mode div.text_cell.unrendered {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     line-height: 170% !important;
     background: #073642;
     background-color: #073642;
@@ -2116,7 +2119,7 @@ div.cell.text_cell .prompt {
 }
 
 div.cell.text_cell.rendered .prompt {
-    font-family: monospace, monospace;
+    font-family: "IBM Plex Mono";
     font-size: 9.5pt !important;
     font-weight: normal;
     color: #586e75 !important;
@@ -2129,7 +2132,7 @@ div.cell.text_cell.rendered .prompt {
 }
 
 div.cell.text_cell.unrendered .prompt {
-    font-family: monospace, monospace;
+    font-family: "IBM Plex Mono";
     font-size: 9.5pt !important;
     font-weight: normal;
     color: #586e75 !important;
@@ -2160,7 +2163,7 @@ div.text_cell.rendered.selected .prompt {
 }
 
 div.rendered_html code {
-    font-family: monospace, monospace;
+    font-family: "IBM Plex Mono";
     font-size: 11pt;
     padding-top: 3px;
     padding-left: 2px;
@@ -2178,7 +2181,7 @@ samp {
 
 .well code,
 code {
-    font-family: monospace, monospace;
+    font-family: "IBM Plex Mono";
     font-size: 11pt !important;
     line-height: 170% !important;
     color: #586e75;
@@ -2224,7 +2227,7 @@ div.rendered_html {
 }
 
 div.rendered_html pre {
-    font-family: monospace, monospace;
+    font-family: "IBM Plex Mono";
     font-size: 11pt !important;
     line-height: 170% !important;
     color: #586e75 !important;
@@ -2241,7 +2244,7 @@ div.rendered_html pre {
 
 div.text_cell_render pre,
 div.text_cell_render code {
-    font-family: monospace, monospace;
+    font-family: "IBM Plex Mono";
     font-size: 11pt !important;
     line-height: 170% !important;
     color: #586e75;
@@ -2270,7 +2273,7 @@ div.text_cell_render h4,
 div.rendered_html h4,
 div.text_cell_render h5,
 div.rendered_html h5 {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     margin: 0.4em .2em .3em .2em !important;
 }
 
@@ -2417,7 +2420,7 @@ div.widget-area {
 }
 
 div.widget-area a {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 12.0pt;
     font-weight: normal;
     font-style: normal;
@@ -2427,7 +2430,7 @@ div.widget-area a {
 
 div.widget-area a:hover,
 div.widget-area a:focus {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 12.0pt;
     font-weight: normal;
     font-style: normal;
@@ -2510,7 +2513,7 @@ div.widget-label {
 }
 
 .rendered_html :link {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 100%;
     color: #586e75;
     text-decoration: underline;
@@ -2524,7 +2527,7 @@ div.widget-label {
 
 .rendered_html :visited:hover,
 .rendered_html :link:hover {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 100%;
     color: #3a5e6a;
 }
@@ -2575,7 +2578,7 @@ div#nbextensions-configurator-container.container,
 }
 
 div.nbext-selector>nav>.nav>li>a {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 10.5pt;
     padding: 2px 5px;
 }
@@ -2606,7 +2609,7 @@ div.nbext-selector>nav>.nav>li.active:hover {
 }
 
 div.nbext-readme>.nbext-readme-contents>.rendered_html {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 11.5pt;
     line-height: 145%;
     padding: 1em 1em;
@@ -2758,14 +2761,14 @@ span.bg-danger.text-danger {
 }
 
 .kse-input-group-pretty>kbd {
-    font-family: monospace, monospace;
+    font-family: "IBM Plex Mono";
     color: #586e75;
     font-weight: normal;
     background: transparent;
 }
 
 .kse-input-group-pretty>kbd {
-    font-family: monospace, monospace;
+    font-family: "IBM Plex Mono";
     color: #586e75;
     font-weight: normal;
     background: transparent;
@@ -2915,7 +2918,7 @@ div.collapsible_headings_toggle .fa-caret-right:before {
 }
 
 input.raw_input {
-    font-family: monospace, monospace;
+    font-family: "IBM Plex Mono";
     font-size: 11pt !important;
     color: #586e75;
     background-color: #052730;
@@ -2955,7 +2958,7 @@ video {
 }
 
 .typeahead-field input {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     color: #586e75;
     border: none;
     font-size: 28pt;
@@ -2976,7 +2979,7 @@ body>div.modal.cmd-palette.typeahead-field {
 }
 
 .typeahead-container button {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 28pt;
     background-color: #002731;
     border: none;
@@ -3016,7 +3019,7 @@ body>div.modal.cmd-palette.typeahead-field {
 
 .typeahead-dropdown,
 .typeahead-list {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-size: 13pt;
     color: #586e75;
     background-color: #084150;
@@ -3132,7 +3135,7 @@ span.shortcut_key {
     display: inline-block;
     width: 16ex;
     text-align: right;
-    font-family: monospace;
+    font-family: "IBM Plex Mono";
 }
 
 .jupyter-keybindings {
@@ -3189,7 +3192,7 @@ div#short-key-bindings-intro.well,
 }
 
 .terminal-app .terminal {
-    font-family: monospace, monospace;
+    font-family: "IBM Plex Mono";
     font-size: 11pt;
     line-height: 170%;
     color: #586e75;
@@ -3328,7 +3331,7 @@ div#pager .ui-resizable-handle {
 
 div.CodeMirror,
 div.CodeMirror pre {
-    font-family: monospace, monospace;
+    font-family: "IBM Plex Mono";
     font-size: 11pt;
     line-height: 170%;
     color: #586e75;
@@ -3404,7 +3407,7 @@ div.js-error {
 }
 
 .ipython_tooltip {
-    font-family: monospace, monospace;
+    font-family: "IBM Plex Mono";
     font-size: 11pt;
     line-height: 170%;
     border: 2px solid #03181d;
@@ -3419,7 +3422,7 @@ div.js-error {
 }
 
 .ipython_tooltip .tooltiptext pre {
-    font-family: monospace, monospace;
+    font-family: "IBM Plex Mono";
     font-size: 11pt;
     line-height: 170%;
     background: #073642;
@@ -3444,7 +3447,7 @@ div.tooltiptext.bigtooltip {
 }
 
 .cm-s-ipython.CodeMirror {
-    font-family: monospace, monospace;
+    font-family: "IBM Plex Mono";
     font-size: 11pt;
     background: #073642;
     color: #586e75;
@@ -3497,7 +3500,8 @@ div.CodeMirror-linenumber,
 }
 
 .cm-s-ipython .CodeMirror-cursor {
-    border-left: 2px solid #0095ff !important;
+    border-left: 0.65em solid red !important;
+    opacity: 35%;
 }
 
 .cm-s-ipython span.cm-comment {
@@ -3620,7 +3624,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
 }
 
 div.cell.text_cell .cm-s-default .cm-header {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
     font-weight: normal;
     color: #b58900 !important;
     margin-top: 0.3em !important;
@@ -3726,7 +3730,7 @@ body :focus .MathJax {
     margin: 0px;
     margin-left: 2px;
     overflow: auto;
-    font-family: monospace, monospace;
+    font-family: "IBM Plex Mono";
     font-size: 11pt;
     color: #586e75;
     width: auto;
