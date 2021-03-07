@@ -3858,6 +3858,11 @@ div#maintoolbar {
     display: none !important;
 }
 
+/* Override default widgets view */
+.jupyter-widgets {
+    color: var(--ancilliary-color-3) !important;
+}
+
 <script>MathJax.Hub.Config( {
         "HTML-CSS": {
 
