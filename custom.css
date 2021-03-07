@@ -21,7 +21,7 @@
     --number-color: #FF8663;
     --operator-color: #6DDFFF;
     --comment-color: #464b5d;
-    --string-color: #b1a1a1c2;
+    --string-color: #B8EB80;
     --variable-color: #82A6E9;
     --variable2-color: #a6accd;
     --matching-bracket-color: #e3f0f4;
@@ -62,7 +62,7 @@
     --ancilliary-color-2: var(--markdown-cell-background-color);
     /* Default font color everywhere - code commas, top navbar
     /* Output cell nos */
-    --ancilliary-color-3: #586e75;
+    --ancilliary-color-3: #8d9ca0;
 
     --ancilliary-color-4: #083e4b;
     --ancilliary-color-5: #657b83;
@@ -3461,11 +3461,12 @@ span.ansigray,
 
 span.ansigreen,
 .ansi-green-fg {
-    color: #859900;
+    color: var(--keyword-color);
 }
 
 .ansi-green-intense-fg {
     color: #839496;
+    font-style: italic;
 }
 
 span.ansipurple,
@@ -3489,7 +3490,7 @@ span.ansiyellow,
 span.ansired,
 .ansi-red-fg,
 .ansi-red-intense-fg {
-    color: #dc322f;
+    color: var(--property-color);
 }
 
 div.output-stderr {
@@ -3523,9 +3524,9 @@ div.js-error {
     font-family: "IBM Plex Mono";
     font-size: 11pt;
     line-height: 170%;
-    background: var(--cell-background-color-main);
-    background-color: var(--cell-background-color-main);
-    color: var(--ancilliary-color-3);
+    background: var(--cell-background-color-secondary);
+    background-color: var(--cell-background-color-secondary);
+    color: var(--code-cell-active-color);
     overflow-x: visible;
     overflow-y: visible;
     max-width: 900px;
@@ -3538,6 +3539,7 @@ div#tooltip.ipython_tooltip {
 }
 
 div.tooltiptext.bigtooltip {
+    background-color: var(--cell-background-color-secondary);
     overflow-x: visible;
     overflow-y: scroll;
     height: 400px;
