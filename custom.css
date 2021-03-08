@@ -21,6 +21,8 @@
     --main-font-family: 'IBM Plex Sans';
     --code-font-family: 'IBM Plex Mono';
     --headings-font-family: 'Alegreya Sans SC', 'IBM Plex Sans', 'sans-serif';
+    --markdown-body-font-family: 'IBM Plex Mono';
+    --main-font-size: 11pt;
     /* --headings-font-family: 'Alegreya Sans SC', 'serif'; */
     /* --heading-code-font-family: 'Anonymous Pro'; */
     --heading-code-font-family: var(--code-font-family);
@@ -44,6 +46,7 @@
     --cell-background-color-main: var(--background-color-main);
     --cell-background-color-secondary: #1a1d30;
     --markdown-cell-background-color: #1a1d30;
+    --markdown-cell-code-font-color: var(--text-cell-passive-color);
     /* --cell-border: medium solid #04313c; */
 
     /* Border Colors */
@@ -86,12 +89,12 @@
 
     /* Headings */
     --markdown-headings-color: #f791ac;
-    --h1-font-size: 250%;
-    --h2-font-size: 200%;
-    --h3-font-size: 170%;
-    --h4-font-size: 140%;
-    --h5-font-size: 120%;
-    --h6-font-size: 110%;
+    --h1-font-size: 215%;
+    --h2-font-size: 180%;
+    --h3-font-size: 150%;
+    --h4-font-size: 120%;
+    --h5-font-size: 100%;
+    --h6-font-size: 95%;
     --headings-code-font-size: 80%;
 
     --h1-align: center;
@@ -1770,6 +1773,7 @@ a {
     text-rendering: geometricPrecision;
     -webkit-font-smoothing: subpixel-antialiased;
     font-weight: 400;
+    font-size: var(--main-font-size);
 }
 
 div.input_area {
@@ -2146,7 +2150,8 @@ div.cell.selected .out_prompt_overlay.prompt {
 div.text_cell,
 div.text_cell_render pre,
 div.text_cell_render {
-    font-family: var(--main-font-family);
+    /* font-family: var(--main-font-family); */
+    font-family: var(--markdown-body-font-family);
     font-size: 13pt;
     line-height: 130% !important;
     color: var(--ancilliary-color-3);
@@ -2319,12 +2324,11 @@ pre {
     line-height: 1.42857143;
     color: var(--ancilliary-color-3);
     background-color: var(--ancilliary-color-6);
-    border: 1px solid var(--ancilliary-color-6);
     border-radius: 0px;
 }
 
 div.rendered_html {
-    color: var(--variable2-color);
+    color: var(--ancilliary-color-3);
 }
 
 .rendered_html *+ul {
@@ -2358,7 +2362,8 @@ div.text_cell_render code {
     font-family: var(--code-font-family);
     font-size: 11pt !important;
     line-height: 170% !important;
-    color: var(--ancilliary-color-3);
+    /* color: var(--code-cell-active-color); */
+    color: var(--markdown-cell-code-font-color);
     background: var(--markdown-cell-background-color);
     background-color: var(--markdown-cell-background-color);
     max-width: 80%;
@@ -2462,6 +2467,7 @@ div.rendered_html h5 {
 .rendered_html h6>code {
     font-size: var(--headings-code-font-size) !important;
     font-family: var(--heading-code-font-family) !important;
+    color: var(--ancilliary-color-3);
 }
 
 
@@ -3082,8 +3088,8 @@ input.raw_input {
     font-size: 11pt !important;
     color: var(--ancilliary-color-3);
     background-color: var(--ancilliary-color-6);
-    border-color: #05232b;
-    background: #05232b;
+    border-color: var(--markdown-cell-background-color);
+    background: var(--markdown-cell-background-color);
     width: auto;
     vertical-align: baseline;
     padding: 0em 0.25em;
@@ -3470,8 +3476,8 @@ div#short-key-bindings-intro.well,
 }
 
 div#pager #pager-contents {
-    background: #002b36 !important;
-    background-color: #002b36 !important;
+    background: var(--background-color-main) !important;
+    background-color: var(--background-color-main) !important;
 }
 
 div#pager pre {
@@ -3773,23 +3779,27 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
 }
 
 .cm-header-1 {
-    font-size: 215%;
+    font-size: var(--h1-font-size);
 }
 
 .cm-header-2 {
-    font-size: 180%;
+    font-size: var(--h2-font-size);
 }
 
 .cm-header-3 {
-    font-size: 150%;
+    font-size: var(--h3-font-size);
 }
 
 .cm-header-4 {
-    font-size: 120%;
+    font-size: var(--h4-font-size);
 }
 
 .cm-header-5 {
-    font-size: 100%;
+    font-size: var(--h5-font-size);
+}
+
+.cm-header-6 {
+    font-size: var(--h6-font-size);
 }
 
 .cm-s-default .cm-hr {
@@ -3821,7 +3831,7 @@ div.cell.text_cell .cm-s-default span.cm-variable-3 {
 }
 
 .cm-s-default span.cm-comment {
-    color: var(--comment-color) !important;
+    color: var(--markdown-cell-code-font-color) !important;
     font-style: italic;
 }
 
