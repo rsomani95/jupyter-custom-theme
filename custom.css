@@ -81,7 +81,7 @@
 
     --ancilliary-color-4: #083e4b;
     --ancilliary-color-5: #657b83;
-    --ancilliary-color-6: rgb(255, 174, 0);
+    --ancilliary-color-6: var(--background-color-main);
     --ancilliary-color-7: var(--markdown-cell-background-color);
 
     /* Font Sizes */
@@ -110,6 +110,11 @@
     --code-cursor-thickness: 0.65em;
     --cursor-opacity: 35%;
     --collapsible-icon-margin-top: 8%;
+}
+
+pre {
+    border-radius: 3px;
+    border: transparent;
 }
 
 div#notebook {
@@ -3577,10 +3582,10 @@ div.js-error {
     font-family: var(--code-font-family);
     font-size: 11pt;
     line-height: 170%;
-    border: 2px solid #03181d;
+    border: 2px solid transparent;
     background: var(--cell-background-color-main);
     background-color: var(--cell-background-color-main);
-    border-radius: 0px;
+    border-radius: 3px;
     overflow-x: visible;
     overflow-y: visible;
     box-shadow: none;
@@ -3896,6 +3901,7 @@ div.cell.text_cell .cm-s-default span.cm-variable-3 {
     text-align: center !important;
     margin: 0em !important;
     line-height: 2.25 !important;
+    color: var(--ancilliary-color-3);
 }
 
 .MathJax:focus,
