@@ -14,12 +14,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans);
 @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans+SC);
+@import url(https://fonts.googleapis.com/css?family=JetBrains+Mono);
 
 
 :root {
     /* Fonts */
     --main-font-family: 'IBM Plex Sans';
-    --code-font-family: 'IBM Plex Mono';
+    --code-font-family: 'JetBrains Mono';
     --headings-font-family: 'Alegreya Sans SC', 'IBM Plex Sans', 'sans-serif';
     --markdown-body-font-family: 'IBM Plex Mono';
     --main-font-size: 11pt;
