@@ -4,7 +4,7 @@ grid_color = "#1B1D30"
 linestyle = '--'
 font_family = 'monospace'
 font_size = 12
-dpi = 100
+dpi = 150
 
 import matplotlib as mpl
 text_keys = ['axes.labelcolor', 'text.color', 'xtick.color', 'ytick.color']
