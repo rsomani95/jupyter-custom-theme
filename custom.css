@@ -111,6 +111,12 @@
     --code-cursor-thickness: 0.65em;
     --cursor-opacity: 35%;
     --collapsible-icon-margin-top: 8%;
+
+    /* Jupyter Widgets */
+    --jp-widgets-margin: 0px !important;
+
+    /* Custom Jupyter Widgets */
+    --img-box-selected-color: #3CDCFF;
 }
 
 pre {
@@ -3952,6 +3958,57 @@ div#maintoolbar {
     color: var(--ancilliary-color-3) !important;
 }
 
+/* ============== Jupyter IPyWidgets ============== */
+.widget-readout {
+    color: var(--ancilliary-color-3) !important;
+}
+
+.widget-button {
+    color: var(--background-color-main) !important;
+    font-family: var(--code-font-family) !important;
+}
+
+/* ============== Custom Widget Classes ============== */
+
+.label-searchbox {
+    width: 100%;
+    border: 0px solid transparent;
+    margin: .3em auto .3em auto !important;
+}
+
+.label-searchbox select {
+    border-radius: 3px !important;
+    /* Makes labels invisible (we only use this as a selection tool) */
+    color: transparent;
+}
+
+.image-box-container {
+    overflow: visible !important;
+    border-radius: 5px;
+    padding: .5em;
+}
+
+.image-box-container-selected {
+    box-shadow:
+        0px 0px 20px var(--img-box-selected-color);
+}
+
+.image-box {
+    border: 0px;
+    border-radius: 3px !important;
+}
+
+.image-box-selected {
+    box-shadow:
+        0px 0px 20px var(--img-box-selected-color);
+}
+
+.label-button,
+.widget-button {
+    margin-right: 3px;
+    border-radius: 2px;
+}
+
 <script>MathJax.Hub.Config( {
         "HTML-CSS": {
 
@@ -3968,4 +4025,4 @@ div#maintoolbar {
     }
 
 );
-</script>
+</script><script>$(".label-searchbox").attr("placeholder", "Select Label") </script>
