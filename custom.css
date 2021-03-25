@@ -3979,7 +3979,7 @@ div#maintoolbar {
 .label-searchbox select {
     border-radius: 3px !important;
     /* Makes labels invisible (we only use this as a selection tool) */
-    color: transparent;
+    color: transparent !important;
 }
 
 .image-box-container {
@@ -4005,9 +4005,23 @@ div#maintoolbar {
 
 .label-button,
 .widget-button {
-    margin-right: 3px;
+    margin-top: 3px !important;
+    margin-right: 3px !important;
     border-radius: 2px;
+    color: var(--background-color-main) !important;
 }
+
+.label-button-toggled {
+    background: #115994 !important;
+    color: #B4BEC1 !important;
+}
+
+/* IPyVuetify UI Components */
+
+/* ipyvuetify.Autocomplete */
+/* .v-input__slot {
+    min-height: 2em !important;
+} */
 
 <script>MathJax.Hub.Config( {
         "HTML-CSS": {
