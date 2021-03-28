@@ -4016,6 +4016,44 @@ div#maintoolbar {
     color: #B4BEC1 !important;
 }
 
+
+/* .widget-tab {} */
+.widget-tab,
+.widget-tab-contents,
+.widget-tab-bar,
+.p-TabBar .p-TabBar-tab {
+    background: #181C2A !important;
+    border: #0F111B !important;
+    color: #B4BEC1 !important;
+}
+
+.p-TabBar .p-TabBar-tab {
+    text-align: center !important;
+    color: #565C5E !important;
+    font-family: "Alegreya Sans SC" !important;
+}
+
+.jupyter-widgets.widget-tab>.p-TabBar .p-TabBar-tabIcon,
+.jupyter-widgets.widget-tab>.p-TabBar .p-TabBar-tabLabel,
+.jupyter-widgets.widget-tab>.p-TabBar .p-TabBar-tabCloseIcon {
+    line-height: 40px !important;
+    width: auto !important
+}
+
+.p-TabBar-tabLabel {
+    font-size: 20px !important;
+}
+
+.p-TabBar-tabLabel {
+    min-width: 50px !important;
+    margin-left: 10 !important;
+}
+
+.p-TabBar .p-TabBar-tab.p-mod-current {
+    color: #B4BEC1 !important;
+    /* border-top: 3px solid red !important; */
+}
+
 /* IPyVuetify UI Components */
 
 /* ipyvuetify.Autocomplete */
