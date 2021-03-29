@@ -4016,6 +4016,36 @@ div#maintoolbar {
     color: #B4BEC1 !important;
 }
 
+/* Upload Buttons */
+
+.file-upload-button-container {
+    border: .1em solid #202239;
+    border-radius: 3px;
+    float: left;
+}
+
+.file-upload-button,
+.file-upload-button-refresh {
+    background: #1B1D30 !important;
+    font-size: 15px !important;
+    height: 50px !important;
+    width: 150px;
+    /* border: 1px solid #8D9C9F; */
+    border-radius: 3px;
+    margin: 3px !important;
+    border-radius: 2px;
+}
+
+.file-upload-button-refresh {
+    margin-left: 0px !important;
+    width: 45px !important;
+    color: #B7EC80 !important;
+}
+
+.file-upload-button-disabled {
+    opacity: 0.5 !important
+}
+
 
 /* .widget-tab {} */
 .widget-tab,
