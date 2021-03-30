@@ -4046,40 +4046,6 @@ div#maintoolbar {
     opacity: 0.5 !important
 }
 
-/* Image Note */
-
-.image-note {
-    width: 100%;
-    border: 0px solid transparent;
-    margin: .3em auto auto !important;
-    padding: 0px 0px 0px 0px;
-}
-
-.image-note-hidden,
-.image-note-hidden>input[type=text] {
-    width: 100%;
-    border: 0px solid transparent;
-    margin: .0px 0px 0px 0px !important;
-    padding: 0px 0px 0px 0px;
-}
-
-.image-note>input[type=text] {
-    border-radius: 3px !important;
-    font-family: "Alegreya Sans";
-}
-
-.toggle-image-note {
-    width: 10%;
-    background: transparent;
-    /* background: white; */
-    /* border: 1px solid #9E9E9E; */
-    border-radius: 3px;
-    height: 28px;
-    font-size: 14px;
-    margin: .3em .1em .3em auto !important;
-    /* margin: .3em auto .3em auto !important; */
-}
-
 /* Class Map Filtering Buttons */
 
 .class-map-buttons-negative>button.label-button {
@@ -4151,6 +4117,74 @@ div#maintoolbar {
 .p-TabBar .p-TabBar-tab.p-mod-current {
     color: #B4BEC1 !important;
     /* border-top: 3px solid red !important; */
+}
+
+/* Image Note */
+
+.toggle-image-note {
+    width: 10% !important;
+    background: transparent !important;
+    /* border: 1px solid #9E9E9E; */
+    border-radius: 3px !important;
+    height: 28px !important;
+    font-size: 14px !important;
+    margin: .3em .1em .3em auto !important;
+    /* margin: .3em auto .3em auto !important; */
+}
+
+.image-note {
+    width: 100% !important;
+    border: 0px solid transparent !important;
+    margin: .3em auto auto !important;
+    padding: 0px 0px 0px 0px;
+}
+
+.image-note-hidden,
+.image-note-hidden>input[type=text] {
+    width: 100% !important;
+    border: 0px solid transparent !important;
+    margin: .0px 0px 0px 0px !important;
+    padding: 0px 0px 0px 0px !important;
+    background: transparent !important;
+    color: transparent !important;
+}
+
+.image-note>input[type=text] {
+    border-radius: 3px !important;
+    font-family: "Alegreya Sans" !important;
+}
+
+/* Grid Ranges */
+
+.range-prev-next-buttons {
+    background: transparent !important;
+    color: #B4BEC1 !important;
+    width: 4% !important;
+    font-size: 20px !important;
+}
+
+.grid-range-slider .widget-label {
+    font-size: 10px !important;
+}
+
+.grid-range-slider {
+    width: 400px !important;
+}
+
+/* #div.output_subarea.jupyter-widgets-view > div > div.slider-container > div > span:nth-child(1) */
+.grid-range-slider .slider-container>div>span:nth-child(1),
+.grid-range-slider .slider-container>div>span:nth-child(3) {
+    background: #B4BEC1 !important;
+    border: 0px;
+}
+
+.grid-range-slider .slider-container>div>div {
+    background: #33557C !important;
+}
+
+.ui-slider-handle {
+    background: #7B8B90 !important;
+    border: 0px !important;
 }
 
 /* IPyVuetify UI Components */
