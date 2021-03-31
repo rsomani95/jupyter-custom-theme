@@ -4015,15 +4015,21 @@ div#maintoolbar {
 
 /* Custom Toggle Button */
 
-.toggle-matching-mode {
+.toggle-matching-mode,
+.toggle-matching-mode:hover {
     width: 230px !important;
     font-family: "JetBrains Mono";
-    background: #115994 !important;
+    box-shadow: inset 0 0 40px #565C5E;
+    background: #365670 !important;
     color: #B4BEC1 !important;
 }
 
 .toggle-matching-mode.mod-active {
-    background: #A52F35 !important;
+    background: #115994 !important;
+}
+
+.image-box-completed {
+    border-top: 0.3em solid #83A83B;
 }
 
 /*  */
@@ -4149,6 +4155,8 @@ div#maintoolbar {
     margin: .3em .1em .3em auto !important;
     /* margin: .3em auto .3em auto !important; */
 }
+
+
 
 .image-note {
     width: 100% !important;
