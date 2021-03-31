@@ -10,7 +10,26 @@
 ## Installation
 
 #### Custom CSS Theme
-First, we need to copy `custom.css` to `~/.jupyter/custom/custom.css`
+You can directly invoke the CSS inside a notebook like this:
+```python
+from IPython.core.display import HTML, display
+from urllib.request import urlopen
+
+CSS_URL = "https://raw.githubusercontent.com/rsomani95/jupyter-custom-theme/master/custom.css"
+CSS = urlopen(CSS_URL)
+CSS = CSS.read().decode('utf-8')
+HTML_CSS = f"""
+<style>
+{CSS}
+</style>
+"""
+HTML(HTML_CSS)
+```
+You will need to run that every time you start a notebook, and the matplotlib theme will not be applied. See below for a more permanent installation
+
+---
+
+For a permanent installation, we first need to copy `custom.css` to `~/.jupyter/custom/custom.css`
 ```bash
 cd ~/.jupyter
 mkdir custom  # may already exist
