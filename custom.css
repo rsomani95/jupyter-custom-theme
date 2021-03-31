@@ -3963,7 +3963,8 @@ div#maintoolbar {
     color: var(--ancilliary-color-3) !important;
 }
 
-.widget-button {
+.widget-button,
+.widget-toggle-button {
     color: var(--background-color-main) !important;
     font-family: var(--code-font-family) !important;
 }
@@ -4004,12 +4005,29 @@ div#maintoolbar {
 }
 
 .label-button,
-.widget-button {
+.widget-button,
+.widget-toggle-button {
     margin-top: 3px !important;
     margin-right: 3px !important;
     border-radius: 2px;
     color: var(--background-color-main) !important;
 }
+
+/* Custom Toggle Button */
+
+.toggle-matching-mode {
+    width: 230px !important;
+    font-family: "JetBrains Mono";
+    background: #115994 !important;
+    color: #B4BEC1 !important;
+}
+
+.toggle-matching-mode.mod-active {
+    background: #A52F35 !important;
+}
+
+/*  */
+
 
 .label-button-toggled {
     background: #115994 !important;
