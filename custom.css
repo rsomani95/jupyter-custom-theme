@@ -4106,6 +4106,11 @@ div#maintoolbar {
     text-align: center;
 }
 
+/* Mark As Completed */
+.mark-as-completed-button {
+    width: 200px !important;
+}
+
 /* .widget-tab {} */
 .widget-tab,
 .widget-tab-contents,
