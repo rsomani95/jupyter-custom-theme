@@ -4004,6 +4004,10 @@ div#maintoolbar {
         0px 0px 20px var(--img-box-selected-color);
 }
 
+.image-box-deleted {
+    opacity: 0.2 !important;
+}
+
 .label-button,
 .widget-button,
 .widget-toggle-button {
@@ -4028,9 +4032,32 @@ div#maintoolbar {
     background: #115994 !important;
 }
 
+/* Image Status Indicators */
+/* Completed, Under Review, Etc. */
+
+.toggle-image-completed-status {
+    width: 250px !important;
+}
+
+.toggle-image-review-status {
+    width: 180px !important;
+}
+
 .image-box-completed {
     border-top: 0.3em solid #83A83B;
 }
+
+.image-in-review {
+    border-top: 0.3em solid #FF8663;
+}
+
+/* Images marked review AND completed get a gradient */
+.image-box-completed.image-in-review {
+    border-top: 0.3em solid transparent;
+    border-image: linear-gradient(to left, red 0%, #83A83B 100%);
+    border-image-slice: 10;
+}
+
 
 /*  */
 
@@ -4106,10 +4133,7 @@ div#maintoolbar {
     text-align: center;
 }
 
-/* Mark As Completed */
-.mark-as-completed-button {
-    width: 200px !important;
-}
+
 
 /* .widget-tab {} */
 .widget-tab,
