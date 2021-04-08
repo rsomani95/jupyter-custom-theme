@@ -4028,13 +4028,11 @@ div#maintoolbar {
 .toggle-matching-mode:hover {
     width: 230px !important;
     font-family: "JetBrains Mono";
-    box-shadow: inset 0 0 40px #565C5E;
-    background: #365670 !important;
-    color: #B4BEC1 !important;
+    background: rgba(17, 89, 148, .4) !important;
 }
 
 .toggle-matching-mode.mod-active {
-    background: #115994 !important;
+    background: rgba(17, 89, 148, 1.0) !important;
 }
 
 /* Image Status Indicators */
