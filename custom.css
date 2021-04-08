@@ -4029,10 +4029,12 @@ div#maintoolbar {
     width: 230px !important;
     font-family: "JetBrains Mono";
     background: rgba(17, 89, 148, .4) !important;
+    color: rgb(180, 190, 193, 0.5) !important;
 }
 
 .toggle-matching-mode.mod-active {
     background: rgba(17, 89, 148, 1.0) !important;
+    color: rgb(180, 190, 193, 1.0) !important;
 }
 
 /* Image Status Indicators */
