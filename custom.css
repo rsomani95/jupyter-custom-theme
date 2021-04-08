@@ -3987,4 +3987,298 @@ div#maintoolbar {
     }
 
 );
-</script><script>$(".label-searchbox").attr("placeholder", "Select Label") </script>
+
+</script><script>$(".label-searchbox").attr("placeholder", "Select Label") </script>.widget-button,
+.widget-toggle-button {
+    color: var(--background-color-main) !important;
+    font-family: var(--code-font-family) !important;
+}
+
+/* ============== Custom Widget Classes ============== */
+
+.widget-html-content {
+    color: #8D9CA0;
+}
+
+.label-searchbox {
+    width: 100%;
+    border: 0px solid transparent;
+    margin: .3em auto .3em auto !important;
+}
+
+.label-searchbox select {
+    border-radius: 3px !important;
+    /* Makes labels invisible (we only use this as a selection tool) */
+    color: transparent !important;
+}
+
+.image-box-container {
+    overflow: visible !important;
+    border-radius: 5px;
+    padding: .5em;
+}
+
+.image-box-container-selected {
+    box-shadow:
+        0px 0px 20px var(--img-box-selected-color);
+}
+
+.image-box {
+    border: 0px;
+    border-radius: 3px !important;
+}
+
+.image-box-container-minimal {
+    overflow: visible !important;
+    padding: 0.1em;
+}
+
+.image-box-selected {
+    box-shadow:
+        0px 0px 20px var(--img-box-selected-color);
+}
+
+.image-box-deleted {
+    opacity: 0.2 !important;
+}
+
+.label-button,
+.widget-button,
+.widget-toggle-button {
+    margin-top: 3px !important;
+    margin-right: 3px !important;
+    border-radius: 2px;
+    color: var(--background-color-main) !important;
+}
+
+/* Custom Toggle Button */
+
+.toggle-matching-mode,
+.toggle-matching-mode:hover {
+    width: 230px !important;
+    font-family: "JetBrains Mono";
+    background: rgba(17, 89, 148, .4) !important;
+    color: rgb(180, 190, 193, 0.5) !important;
+}
+
+.toggle-matching-mode.mod-active {
+    background: rgba(17, 89, 148, 1.0) !important;
+    color: rgb(180, 190, 193, 1.0) !important;
+}
+
+/* Image Status Indicators */
+/* Completed, Under Review, Etc. */
+
+.toggle-image-completed-status {
+    width: 250px !important;
+}
+
+.toggle-image-review-status {
+    width: 180px !important;
+}
+
+.image-box-completed {
+    border-top: 0.3em solid #83A83B;
+}
+
+.image-in-review {
+    border-top: 0.3em solid #FF8663;
+}
+
+/* Images marked review AND completed get a gradient */
+.image-box-completed.image-in-review {
+    border-top: 0.3em solid transparent;
+    border-image: linear-gradient(to left, red 0%, #83A83B 100%);
+    border-image-slice: 10;
+}
+
+
+/*  */
+
+
+.label-button-toggled {
+    background: #115994 !important;
+    color: #B4BEC1 !important;
+}
+
+/* Upload Buttons */
+
+.file-upload-button-container {
+    border: .1em solid #202239;
+    border-radius: 3px;
+    float: left;
+}
+
+.file-upload-button,
+.file-upload-button-refresh {
+    background: #1B1D30 !important;
+    font-size: 15px !important;
+    height: 50px !important;
+    width: 150px;
+    /* border: 1px solid #8D9C9F; */
+    border-radius: 3px;
+    margin: 3px !important;
+    border-radius: 2px;
+}
+
+.file-upload-button-refresh {
+    margin-left: 0px !important;
+    width: 45px !important;
+    color: #B7EC80 !important;
+}
+
+.file-upload-button-disabled {
+    opacity: 0.5 !important
+}
+
+/* Class Map Filtering Buttons */
+
+.class-map-buttons-negative>button.label-button {
+    opacity: 0.9;
+}
+
+.class-map-buttons-negative>button.label-button-toggled {
+    opacity: 1.0;
+    background-color: #A62F35 !important;
+}
+
+.class-map-buttons-negative-container {
+    margin-left: 30px;
+}
+
+.class-map-buttons-positive-container {
+    padding-right: 30px;
+}
+
+.class-map-positive-heading {
+    color: #83A83B !important;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.class-map-negative-heading {
+    color: #D85865 !important;
+    text-align: right;
+    margin-right: 20px;
+}
+
+/* Main Info Panel */
+.main-info-panel {
+    text-align: center;
+}
+
+
+
+/* .widget-tab {} */
+.widget-tab,
+.widget-tab-contents,
+.widget-tab-bar,
+.p-TabBar .p-TabBar-tab {
+    background: #181C2A !important;
+    border: #0F111B !important;
+    color: #B4BEC1 !important;
+}
+
+.p-TabBar .p-TabBar-tab {
+    text-align: center !important;
+    color: #565C5E !important;
+    font-family: "Alegreya Sans SC" !important;
+}
+
+.jupyter-widgets.widget-tab>.p-TabBar .p-TabBar-tabIcon,
+.jupyter-widgets.widget-tab>.p-TabBar .p-TabBar-tabLabel,
+.jupyter-widgets.widget-tab>.p-TabBar .p-TabBar-tabCloseIcon {
+    line-height: 40px !important;
+    width: auto !important
+}
+
+.p-TabBar-tabLabel {
+    font-size: 20px !important;
+}
+
+.p-TabBar-tabLabel {
+    min-width: 50px !important;
+    margin-left: 10 !important;
+}
+
+.p-TabBar .p-TabBar-tab.p-mod-current {
+    color: #B4BEC1 !important;
+    /* border-top: 3px solid red !important; */
+}
+
+/* Image Note */
+
+.toggle-image-note {
+    width: 10% !important;
+    background: transparent !important;
+    /* border: 1px solid #9E9E9E; */
+    border-radius: 3px !important;
+    height: 28px !important;
+    font-size: 14px !important;
+    margin: .3em .1em .3em auto !important;
+    /* margin: .3em auto .3em auto !important; */
+}
+
+
+
+.image-note {
+    width: 100% !important;
+    border: 0px solid transparent !important;
+    margin: .3em auto auto !important;
+    padding: 0px 0px 0px 0px;
+}
+
+.image-note-hidden,
+.image-note-hidden>input[type=text] {
+    width: 100% !important;
+    border: 0px solid transparent !important;
+    margin: .0px 0px 0px 0px !important;
+    padding: 0px 0px 0px 0px !important;
+    background: transparent !important;
+    color: transparent !important;
+}
+
+.image-note>input[type=text] {
+    border-radius: 3px !important;
+    font-family: "Alegreya Sans" !important;
+}
+
+/* Grid Ranges */
+
+.range-prev-next-buttons {
+    background: transparent !important;
+    color: #B4BEC1 !important;
+    width: 4% !important;
+    font-size: 20px !important;
+}
+
+.grid-range-slider .widget-label {
+    font-size: 10px !important;
+}
+
+.grid-range-slider {
+    width: 400px !important;
+}
+
+/* #div.output_subarea.jupyter-widgets-view > div > div.slider-container > div > span:nth-child(1) */
+.grid-range-slider .slider-container>div>span:nth-child(1),
+.grid-range-slider .slider-container>div>span:nth-child(3) {
+    background: #B4BEC1 !important;
+    border: 0px;
+}
+
+.grid-range-slider .slider-container>div>div {
+    background: #33557C !important;
+}
+
+.ui-slider-handle {
+    background: #7B8B90 !important;
+    border: 0px !important;
+}
+
+/* IPyVuetify UI Components */
+
+/* ipyvuetify.Autocomplete */
+/* .v-input__slot {
+    min-height: 2em !important;
+} */
