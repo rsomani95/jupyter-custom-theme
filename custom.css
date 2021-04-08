@@ -3999,6 +3999,11 @@ div#maintoolbar {
     border-radius: 3px !important;
 }
 
+.image-box-container-minimal {
+    overflow: visible !important;
+    padding: 0.1em;
+}
+
 .image-box-selected {
     box-shadow:
         0px 0px 20px var(--img-box-selected-color);
