@@ -17,15 +17,26 @@
 @import url(https://fonts.googleapis.com/css?family=JetBrains+Mono);
 
 
+@font-face {
+    font-family: 'DIN Pro';
+    src: url('DINPro.eot');
+    src: local('DIN Pro'), local('DINPro'),
+        url('DINPro.eot?#iefix') format('embedded-opentype'),
+        url('DINPro.woff2') format('woff2'),
+        url('DINPro.woff') format('woff'),
+        url('DINPro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 :root {
     /* Fonts */
-    --main-font-family: 'IBM Plex Sans';
+    --main-font-family: 'DIN Pro', 'IBM Plex Sans';
     --code-font-family: 'JetBrains Mono';
-    --headings-font-family: 'Alegreya Sans SC', 'IBM Plex Sans', 'sans-serif';
-    --markdown-body-font-family: 'IBM Plex Mono';
+    --headings-font-family: 'DIN Pro', 'IBM Plex Sans', 'Alegreya Sans SC', 'sans-serif';
+    --markdown-body-font-family: 'DIN Pro', 'IBM Plex Mono';
     --main-font-size: 11pt;
-    /* --headings-font-family: 'Alegreya Sans SC', 'serif'; */
-    /* --heading-code-font-family: 'Anonymous Pro'; */
     --heading-code-font-family: var(--code-font-family);
 
     /* Code Formatting Colors */
